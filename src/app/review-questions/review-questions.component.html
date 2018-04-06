@@ -1,0 +1,16 @@
+<div class = 'buttonContainer'>
+<div class = 'buttonRight'  (click) = "sendPlaces('questionairre')"> Back to questions </div>
+<div class = 'buttonLeft'  (click) = "sendPlaces('printQuiz')"> Submit Quiz </div>
+</div>
+
+<div id = "parent" [@loadedQuestion] = "this._quiz.questionsKey.value.length">
+<div class = 'loadedQuestion' *ngFor = "let questions of this._quiz.questionsKey.value; let i = index">
+<h3 class = 'test' [ngStyle]="_color.setStyle('question')">{{questions}}</h3>
+<h4 class = 'answerArea' [ngStyle]="_color.setStyle('answer')">
+<div class = 'sampleAnswers' *ngFor = "let answers of this._quiz.storeAnswersKey.value[i]">{{answers}}</div>
+</h4>
+<div class = 'buttonRightRelative' (click) = "this._quiz.removeQuestions(i)">Delete</div>
+</div>
+</div>
+
+

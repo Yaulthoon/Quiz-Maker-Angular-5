@@ -1,0 +1,19 @@
+<h1 id = 'tester'>Please fill in your quiz based on the template below.</h1>
+
+<h5>Make sure to select the correct answer before continuing to the next question.</h5>
+
+
+<h3 class = "test" [ngStyle]="_color.setStyle('question')">Question:  <input type = "text" name = "questionsText"></h3>
+
+<h4 class = "answerArea" [ngStyle]="_color.setStyle('answer')">
+<input type = "radio" name = "answers" value = 0><input type = "text" name = "answersText">
+<input type = "radio" name = "answers" value = 0><input type = "text" name = "answersText">
+<input type = "radio" name = "answers" value = 0><input type = "text" name = "answersText">
+<input type = "radio" name = "answers" value = 0><input type = "text" name = "answersText">
+</h4>
+
+<div class = 'buttonContainer'>
+<div class = 'buttonRight' (click)="sendPlaces('makeCSS2')"> Back </div>
+<div class = 'button' (click)="this._quiz.collectData()"> Add Question </div>
+<div class = 'buttonLeft' (click)="sendPlaces('reviewQuestions')"> Review </div>
+</div>

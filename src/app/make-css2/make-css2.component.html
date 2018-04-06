@@ -1,0 +1,98 @@
+<h1>Adjust the Style</h1>
+
+<h3 class = "test" [ngStyle]="_color.setStyle('question')"><u>Question area reference</u> <br/>
+Background:  Red ({{this._color.backgroundQuestionRed.value}}), 
+Green ({{this._color.backgroundQuestionGreen.value}}), 
+Blue ({{this._color.backgroundQuestionBlue.value}}). <br/>
+Text:  Red ({{this._color.fontQuestionRed.value}}), 
+Green ({{this._color.fontQuestionGreen.value}}), 
+Blue ({{this._color.fontQuestionBlue.value}}).
+</h3>
+
+<h4 class = "answerArea" [ngStyle]="_color.setStyle('answer')">
+<div class = "sampleAnswers">Sample of the answer area.</div>
+<div class = "sampleAnswers">Where multiple choice Answers</div>
+<div class = "sampleAnswers">may appear in your quiz depending</div>
+<div class = "sampleAnswers">on the number you choose.</div>
+</h4>
+
+<!--Answer Area Background-->
+<h2>Answer Area Background</h2>
+<div class = 'paragraphBox'>Answer area background <span style="color:red">
+(red value: 0-255)</span>:</div>
+<div class = 'minusBox' (mousedown)= "_color.changeBQR(this._color.backgroundAnswerRed, 'minus', 20)"
+(mouseup)="_color.handleMouseUp()" (mouseleave) ="_color.handleMouseUp()">--</div>
+<div class = 'minusBox' (mousedown)= "_color.changeBQR(this._color.backgroundAnswerRed, 'minus', 200)"
+(mouseup)="_color.handleMouseUp()" (mouseleave) ="_color.handleMouseUp()">-</div>
+<div class = 'inputBox'>{{this._color.backgroundAnswerRed.value}}</div>
+<div class = 'addBox' (mousedown)= "_color.changeBQR(this._color.backgroundAnswerRed, 'plus', 200)"
+(mouseup)="_color.handleMouseUp()" (mouseleave) ="_color.handleMouseUp()">+</div>
+<div class = 'addBox' (mousedown)= "_color.changeBQR(this._color.backgroundAnswerRed, 'plus', 20)"
+(mouseup)="_color.handleMouseUp()" (mouseleave) ="_color.handleMouseUp()">++</div>
+
+<div class = 'paragraphBox'>Answer area background <span style="color:green">
+(green value: 0-255)</span>: </div>
+<div class = 'minusBox' (mousedown)= "_color.changeBQR(this._color.backgroundAnswerGreen, 'minus', 20)"
+(mouseup)="_color.handleMouseUp()" (mouseleave) ="_color.handleMouseUp()">--</div>
+<div class = 'minusBox' (mousedown)= "_color.changeBQR(this._color.backgroundAnswerGreen, 'minus', 200)"
+(mouseup)="_color.handleMouseUp()" (mouseleave) ="_color.handleMouseUp()">-</div>
+<div class = 'inputBox'>{{this._color.backgroundAnswerGreen.value}}</div>
+<div class = 'addBox' (mousedown)= "_color.changeBQR(this._color.backgroundAnswerGreen, 'plus', 200)"
+(mouseup)="_color.handleMouseUp()" (mouseleave) ="_color.handleMouseUp()">+</div>
+<div class = 'addBox' (mousedown)= "_color.changeBQR(this._color.backgroundAnswerGreen, 'plus', 20)"
+(mouseup)="_color.handleMouseUp()" (mouseleave) ="_color.handleMouseUp()">++</div>
+
+<div class = 'paragraphBox'>Answer area background <span style="color:blue">
+(blue value: 0-255)</span>:</div>
+<div class = 'minusBox' (mousedown)= "_color.changeBQR(this._color.backgroundAnswerBlue, 'minus', 20)"
+(mouseup)="_color.handleMouseUp()" (mouseleave) ="_color.handleMouseUp()">--</div>
+<div class = 'minusBox' (mousedown)= "_color.changeBQR(this._color.backgroundAnswerBlue, 'minus', 200)"
+(mouseup)="_color.handleMouseUp()" (mouseleave) ="_color.handleMouseUp()">-</div>
+<div class = 'inputBox' (ngModel)= "abBlue">{{this._color.backgroundAnswerBlue.value}}</div>
+<div class = 'addBox' (mousedown)= "_color.changeBQR(this._color.backgroundAnswerBlue, 'plus', 200)"
+(mouseup)="_color.handleMouseUp()" (mouseleave) ="_color.handleMouseUp()">+</div>
+<div class = 'addBox' (mousedown)= "_color.changeBQR(this._color.backgroundAnswerBlue, 'plus', 20)"
+(mouseup)="_color.handleMouseUp()" (mouseleave) ="_color.handleMouseUp()">++</div>
+
+<!--Answer Area Text Color-->
+<h2>Answer Area Text</h2>
+<div class = 'paragraphBox'>Answer area text <span style="color:red">
+(red value: 0-255)</span>:</div>
+<div class = 'minusBox' (mousedown)= "_color.changeBQR(this._color.fontAnswerRed, 'minus', 20)"
+(mouseup)="_color.handleMouseUp()" (mouseleave) ="_color.handleMouseUp()">--</div>
+<div class = 'minusBox' (mousedown)= "_color.changeBQR(this._color.fontAnswerRed, 'minus', 200)"
+(mouseup)="_color.handleMouseUp()" (mouseleave) ="_color.handleMouseUp()">-</div>
+<div class = 'inputBox'>{{this._color.fontAnswerRed.value}}</div>
+<div class = 'addBox' (mousedown)= "_color.changeBQR(this._color.fontAnswerRed, 'plus', 200)"
+(mouseup)="_color.handleMouseUp()" (mouseleave) ="_color.handleMouseUp()">+</div>
+<div class = 'addBox' (mousedown)= "_color.changeBQR(this._color.fontAnswerRed, 'plus', 20)"
+(mouseup)="_color.handleMouseUp()" (mouseleave) ="_color.handleMouseUp()">++</div>
+
+<div class = 'paragraphBox'>Answer area text <span style="color:green">
+(green value: 0-255)</span>: </div>
+<div class = 'minusBox' (mousedown)= "_color.changeBQR(this._color.fontAnswerGreen, 'minus', 20)"
+(mouseup)="_color.handleMouseUp()" (mouseleave) ="_color.handleMouseUp()">--</div>
+<div class = 'minusBox' (mousedown)= "_color.changeBQR(this._color.fontAnswerGreen, 'minus', 200)"
+(mouseup)="_color.handleMouseUp()" (mouseleave) ="_color.handleMouseUp()">-</div>
+<div class = 'inputBox'>{{this._color.fontAnswerGreen.value}}</div>
+<div class = 'addBox' (mousedown)= "_color.changeBQR(this._color.fontAnswerGreen, 'plus', 200)"
+(mouseup)="_color.handleMouseUp()" (mouseleave) ="_color.handleMouseUp()">+</div>
+<div class = 'addBox' (mousedown)= "_color.changeBQR(this._color.fontAnswerGreen, 'plus', 20)"
+(mouseup)="_color.handleMouseUp()" (mouseleave) ="_color.handleMouseUp()">++</div>
+
+<div class = 'paragraphBox'>Answer area text <span style="color:blue">
+(blue value: 0-255)</span>:</div>
+<div class = 'minusBox' (mousedown)= "_color.changeBQR(this._color.fontAnswerBlue, 'minus', 20)"
+(mouseup)="_color.handleMouseUp()" (mouseleave) ="_color.handleMouseUp()">--</div>
+<div class = 'minusBox' (mousedown)= "_color.changeBQR(this._color.fontAnswerBlue, 'minus', 200)"
+(mouseup)="_color.handleMouseUp()" (mouseleave) ="_color.handleMouseUp()">-</div>
+<div class = 'inputBox'>{{this._color.fontAnswerBlue.value}}</div>
+<div class = 'addBox' (mousedown)= "_color.changeBQR(this._color.fontAnswerBlue, 'plus', 200)"
+(mouseup)="_color.handleMouseUp()" (mouseleave) ="_color.handleMouseUp()">+</div>
+<div class = 'addBox' (mousedown)= "_color.changeBQR(this._color.fontAnswerBlue, 'plus', 20)"
+(mouseup)="_color.handleMouseUp()" (mouseleave) ="_color.handleMouseUp()">++</div>
+
+<div class = 'buttonContainer'>
+<div class = 'buttonRight' (click) = "sendPlaces('makeCSS')"> Back </div>
+<div class = 'buttonLeft' (click)="sendPlaces('questionairre')"> Continue </div>
+</div>

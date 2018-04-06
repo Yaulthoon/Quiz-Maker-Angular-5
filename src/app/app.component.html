@@ -1,0 +1,24 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<head>
+<base href="/">
+</head>
+<div id = "logo">Quiz Maker</div>
+<div id = "navigation">
+<a routerLink="about">About</a>
+<a routerLink="makeCSS">Question Area</a>
+<a routerLink="makeCSS2">Answer Area</a>
+<a routerLink="questionairre">Create Questions</a>
+<a routerLink="reviewQuestions">Review Questions</a>
+<a routerLink= "printQuiz">Print Quiz</a>
+</div>
+<div id="quizMakerBackground">
+<div id="quizMakerForeground">
+
+<div [@routerAnimation]="getRouteAnimation(route)">
+<router-outlet #route="outlet"></router-outlet>
+</div>
+
+</div>
+</div>
+
+

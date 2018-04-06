@@ -1,0 +1,90 @@
+
+
+<h1>Adjust the Style</h1>
+
+<h3 class = "test" [ngStyle]="_data.setStyle('question')">Sample of the question area.</h3>
+
+<h4 class = "answerArea" [ngStyle]="_data.setStyle('answer')">
+<div class = "sampleAnswers">Sample of the answer area.</div>
+<div class = "sampleAnswers">Where multiple choice questions</div>
+<div class = "sampleAnswers">may appear in your quiz depending</div>
+<div class = "sampleAnswers">on the number you choose.</div></h4>
+
+<!--Question Area Background-->
+<h2>Question Area Background</h2>
+<div class = 'paragraphBox'>Question area background <span style="color:red">
+(red value: 0-255)</span>:</div>
+<div class = 'minusBox' (mousedown)="_data.changeBQR(this._data.backgroundQuestionRed, 'minus', 20)" 
+(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">--</div>
+<div class = 'minusBox' (mousedown)="_data.changeBQR(this._data.backgroundQuestionRed, 'minus', 200)"
+(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">-</div>
+<div class = 'inputBox'>{{this._data.backgroundQuestionRed.value}}</div>
+<div class = 'addBox' (mousedown)="_data.changeBQR(this._data.backgroundQuestionRed, 'plus', 200)"
+(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">+</div>
+<div class = 'addBox' (mousedown)="_data.changeBQR(this._data.backgroundQuestionRed, 'plus', 20)"
+(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">++</div>
+
+<div class = 'paragraphBox'>Question area background <span style="color:green">
+(green value: 0-255)</span>: </div>
+<div class = 'minusBox' (mousedown)="_data.changeBQR(this._data.backgroundQuestionGreen, 'minus', 20)"
+(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">--</div>
+<div class = 'minusBox' (mousedown)="_data.changeBQR(this._data.backgroundQuestionGreen, 'minus', 200)"
+(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">-</div>
+<div class = 'inputBox'>{{this._data.backgroundQuestionGreen.value}}</div>
+<div class = 'addBox' (mousedown)="_data.changeBQR(this._data.backgroundQuestionGreen, 'plus', 200)"
+(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">+</div>
+<div class = 'addBox' (mousedown)="_data.changeBQR(this._data.backgroundQuestionGreen, 'plus', 20)"
+(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">++</div>
+
+<div class = 'paragraphBox'>Question area background <span style="color:blue">
+(blue value: 0-255)</span>:</div>
+<div class = 'minusBox' (mousedown)="_data.changeBQR(this._data.backgroundQuestionBlue, 'minus', 20)"
+(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">--</div>
+<div class = 'minusBox' (mousedown)="_data.changeBQR(this._data.backgroundQuestionBlue, 'minus', 200)"
+(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">-</div>
+<div class = 'inputBox'>{{this._data.backgroundQuestionBlue.value}}</div>
+<div class = 'addBox' (mousedown)="_data.changeBQR(this._data.backgroundQuestionBlue, 'plus', 200)"
+(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">+</div>
+<div class = 'addBox' (mousedown)="_data.changeBQR(this._data.backgroundQuestionBlue, 'plus', 20)"
+(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">++</div>
+
+<!--Question Area Text Color-->
+<h2>Question Area Text</h2>
+<div class = 'paragraphBox'>Question area text <span style="color:red">
+(red value: 0-255)</span>:</div>
+<div class = 'minusBox' (mousedown)="_data.changeBQR(this._data.fontQuestionRed, 'minus', 20)"
+(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">--</div>
+<div class = 'minusBox' (mousedown)="_data.changeBQR(this._data.fontQuestionRed, 'minus', 200)"
+(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">-</div>
+<div class = 'inputBox'>{{this._data.fontQuestionRed.value}}</div>
+<div class = 'addBox' (mousedown)="_data.changeBQR(this._data.fontQuestionRed, 'plus', 200)"
+(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">+</div>
+<div class = 'addBox' (mousedown)="_data.changeBQR(this._data.fontQuestionRed, 'plus', 20)"
+(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">++</div>
+
+<div class = 'paragraphBox'>Question area text <span style="color:green">
+(green value: 0-255)</span>: </div>
+<div class = 'minusBox' (mousedown)="_data.changeBQR(this._data.fontQuestionGreen, 'minus', 20)"
+(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">--</div>
+<div class = 'minusBox' (mousedown)="_data.changeBQR(this._data.fontQuestionGreen, 'minus', 200)"
+(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">-</div>
+<div class = 'inputBox'>{{this._data.fontQuestionGreen.value}}</div>
+<div class = 'addBox' (mousedown)="_data.changeBQR(this._data.fontQuestionGreen, 'plus', 200)"
+(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">+</div>
+<div class = 'addBox' (mousedown)="_data.changeBQR(this._data.fontQuestionGreen, 'plus', 20)"
+(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">++</div>
+
+<div class = 'paragraphBox'>Question area text <span style="color:blue">
+(blue value: 0-255)</span>:</div>
+<div class = 'minusBox' (mousedown)="_data.changeBQR(this._data.fontQuestionBlue, 'minus', 20)"
+(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">--</div>
+<div class = 'minusBox' (mousedown)="_data.changeBQR(this._data.fontQuestionBlue, 'minus', 200)"
+(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">-</div>
+<div class = 'inputBox'>{{this._data.fontQuestionBlue.value}}</div>
+<div class = 'addBox' (mousedown)="_data.changeBQR(this._data.fontQuestionBlue, 'plus', 200)"
+(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">+</div>
+<div class = 'addBox' (mousedown)="_data.changeBQR(this._data.fontQuestionBlue, 'plus', 20)"
+(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">++</div>
+
+<div class = 'button' (click) = "sendPlaces('makeCSS2')">Continue </div>
+
