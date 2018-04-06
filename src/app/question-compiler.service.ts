@@ -6,13 +6,13 @@ export class QuestionCompilerService {
 
   constructor() { }
   
-  private answersKey = new BehaviorSubject<any>([]);
+  public answersKey = new BehaviorSubject<any>([]);
   aK = this.answersKey.asObservable();
   
-  private storeAnswersKey = new BehaviorSubject<any>([]);
+  public storeAnswersKey = new BehaviorSubject<any>([]);
   sAK = this.storeAnswersKey.asObservable();
   
-  private questionsKey = new BehaviorSubject<any>([]);
+  public questionsKey = new BehaviorSubject<any>([]);
   qK = this.questionsKey.asObservable();
   
   answers = [];

@@ -11,8 +11,8 @@ import { ColorChangerService } from '../color-changer.service';
 })
 export class MakeCssComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private router: Router, 
-  private _data: ColorChangerService) {
+  constructor(public route: ActivatedRoute, public router: Router, 
+  public _data: ColorChangerService) {
 
 	  }
 

@@ -25,8 +25,8 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 })
 export class ReviewQuestionsComponent implements OnInit {
 
-  constructor(private router: Router, private _quiz: QuestionCompilerService, 
-  private _color: ColorChangerService) { }
+  constructor(public router: Router, public _quiz: QuestionCompilerService, 
+  public _color: ColorChangerService) { }
 
   ngOnInit() {
   }

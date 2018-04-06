@@ -12,6 +12,7 @@ import { ColorChangerService } from './color-changer.service';
 import { QuestionCompilerService } from './question-compiler.service';
 import { AboutComponent } from './about/about.component';
 import { PrintQuizComponent } from './print-quiz/print-quiz.component';
+import {enableProdMode} from '@angular/core';
 
 
 

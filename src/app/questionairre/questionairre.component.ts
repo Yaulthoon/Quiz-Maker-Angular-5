@@ -12,8 +12,8 @@ import { ColorChangerService } from '../color-changer.service';
 })
 export class QuestionairreComponent implements OnInit {
 
-  constructor(private router: Router, private _quiz: QuestionCompilerService, 
-  private _color: ColorChangerService) { 
+  constructor(public router: Router, public _quiz: QuestionCompilerService, 
+  public _color: ColorChangerService) { 
   }
 
   ngOnInit() {

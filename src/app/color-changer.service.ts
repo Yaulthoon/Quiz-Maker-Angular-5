@@ -10,44 +10,44 @@ export class ColorChangerService {
   }
   
     //Question Area Background
-  	private backgroundQuestionRed = new BehaviorSubject(255);
+  	public backgroundQuestionRed = new BehaviorSubject(255);
 	bQR = this.backgroundQuestionRed.asObservable();
 	
-	private backgroundQuestionGreen = new BehaviorSubject(255);
+	public backgroundQuestionGreen = new BehaviorSubject(255);
 	bQG = this.backgroundQuestionGreen.asObservable();
 	
-	private backgroundQuestionBlue = new BehaviorSubject(255);
+	public backgroundQuestionBlue = new BehaviorSubject(255);
 	bQB = this.backgroundQuestionBlue.asObservable();
 	
 	//Question Area Font
-	private fontQuestionRed = new BehaviorSubject(0);
+	public fontQuestionRed = new BehaviorSubject(0);
 	fQR = this.fontQuestionRed.asObservable();
 	
-	private fontQuestionGreen = new BehaviorSubject(0);
+	public fontQuestionGreen = new BehaviorSubject(0);
 	fQG = this.fontQuestionGreen.asObservable();
 	
-	private fontQuestionBlue = new BehaviorSubject(0);
+	public fontQuestionBlue = new BehaviorSubject(0);
 	fQB = this.fontQuestionBlue.asObservable();
 	
 	//Answer Area Background
-	private backgroundAnswerRed = new BehaviorSubject(255);
+	public backgroundAnswerRed = new BehaviorSubject(255);
 	bAR = this.backgroundAnswerRed.asObservable();
 	
-	private backgroundAnswerGreen = new BehaviorSubject(255);
+	public backgroundAnswerGreen = new BehaviorSubject(255);
 	bAG = this.backgroundAnswerGreen.asObservable();
 	
-	private backgroundAnswerBlue = new BehaviorSubject(255);
+	public backgroundAnswerBlue = new BehaviorSubject(255);
 	bAB = this.backgroundAnswerBlue.asObservable();
 	
 	//Answer Area Font
 	
-	private fontAnswerRed = new BehaviorSubject(0);
+	public fontAnswerRed = new BehaviorSubject(0);
 	fAR = this.fontAnswerRed.asObservable();
 	
-	private fontAnswerGreen = new BehaviorSubject(0);
+	public fontAnswerGreen = new BehaviorSubject(0);
 	fAG = this.fontAnswerRed.asObservable();
 	
-	private fontAnswerBlue = new BehaviorSubject(0);
+	public fontAnswerBlue = new BehaviorSubject(0);
 	fAB = this.fontAnswerBlue.asObservable();
 	
 	setStyle (section) {

@@ -10,7 +10,7 @@ import { ColorChangerService } from '../color-changer.service';
 })
 export class MakeCss2Component implements OnInit {
 
-  constructor(private router: Router, private _color: ColorChangerService) { }
+  constructor(public router: Router, public _color: ColorChangerService) { }
 
   ngOnInit() {
   }
