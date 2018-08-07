@@ -1,90 +1,124 @@
 
-
 <h1>Adjust the Style</h1>
+<div>
+<div class = "toggleBox"> 
+<div class = 'toggleBG' [ngStyle] = "this.backDiv(this.color1, this.color2)" (click) = "this.toggleStyle(true)">BG</div>
+<div class = 'toggleText' [ngStyle] = "this.backDiv(this.color2, this.color1)" (click) = "this.toggleStyle(false)">Text</div>
+</div>
+</div>
+  
+<h3 class = "test" [ngStyle]="_data.setStyle('question')">How do I refer back to my color choices?</h3>
+  
+  <h4 class = "answerArea" [ngStyle]="_data.setStyle('answer')">
+<div class = "sampleAnswers">
+Background for question area: 
+({{this._data.backgroundQuestionRed.value}}, 
+{{this._data.backgroundQuestionGreen.value}}, 
+{{this._data.backgroundQuestionBlue.value}}).
+</div>
+<div class = "sampleAnswers">
+Font for question area: 
+({{this._data.fontQuestionRed.value}}, 
+{{this._data.fontQuestionGreen.value}}, 
+{{this._data.fontQuestionBlue.value}}).
+</div>
+<div class = "sampleAnswers">
+Background for answer area: 
+({{this._data.backgroundAnswerRed.value}}, 
+{{this._data.backgroundAnswerGreen.value}}, 
+{{this._data.backgroundAnswerBlue.value}}).</div>
+<div class = "sampleAnswers">
+Background for question area: 
+({{this._data.fontAnswerRed.value}}, 
+{{this._data.fontAnswerGreen.value}}, 
+{{this._data.fontAnswerBlue.value}}).
+</div></h4>
+  
+  <!--Question Area Background-->
+<div [hidden] = "!this.isActive">
+  <h2>Question Area Background</h2>
+<div id = 'sliders'>
+<h3>Sliders</h3>
+<div class = 'sliderContainer'>
+<div class = 'redLabel'>Red: {{this._data.backgroundQuestionRed.value}}</div>
+<input type="range" id = 'range1' name = "range1" min="0" max="255"  
+class = 'redSlider' value = {{this._data.backgroundQuestionRed.value}}
+[ngStyle]="this.sliderDiv(this._data.backgroundQuestionRed.value, 'red')">
+</div>
+<div class = 'sliderContainer'>
+<div class = 'greenLabel'>Green: {{this._data.backgroundQuestionGreen.value}}</div>
+<input type="range" id = 'range2' name = "range2" min="0" max="255"  
+class = 'greenSlider' value = {{this._data.backgroundQuestionGreen.value}}
+[ngStyle]="this.sliderDiv(this._data.backgroundQuestionGreen.value, 'green')">
+</div>
+<div class = 'sliderContainer'>
+<div class = 'blueLabel'>Blue: {{this._data.backgroundQuestionBlue.value}}</div>
+<input type="range" id = 'range3' name = "range3" min="0" max="255"  
+class = 'blueSlider' value = {{this._data.backgroundQuestionBlue.value}}
+[ngStyle]="this.sliderDiv(this._data.backgroundQuestionBlue.value, 'blue')">
+</div>
+</div>
+<div id = 'manualContainer'>
+<h3>Manual Entry</h3>
+  
+<label class = 'red' name = 'rgbInput1'>Red:</label>
+<input class = 'redInput' type = 'text' value = {{this._data.backgroundQuestionRed.value}}>
+<label class = 'green' name = 'rgbInput3'>Green:</label>
+<input class = 'greenInput' type = 'text' value = {{this._data.backgroundQuestionGreen.value}}>
+<label class = 'blue' name = 'rgbInput2'>Blue:</label>
+<input class = 'blueInput' type = 'text' value = {{this._data.backgroundQuestionBlue.value}}>
+<div class = 'manualButton' [ngStyle] = "this._data.setStyle('question')" 
+(click) = "this._data.adjustColorRGB(this._data.backgroundQuestionRed, this._data.backgroundQuestionGreen, this._data.backgroundQuestionBlue, 'question')">Set Color</div>
+<div class = 'separator'> OR </div>
+<label class = 'hex' name = 'hexToRGB'>Insert Hex:</label> 
+<input [ngStyle] = "this.hexInput()" type = 'text' [(ngModel)] = 'this._data.currentHex'>
+<div class = 'hexButton' [ngStyle] = "this._data.setStyle('question')" (click) = "this._data.rgbConvert(this._data.currentHex, this._data.backgroundQuestionRed, this._data.backgroundQuestionGreen, this._data.backgroundQuestionBlue)">Set Color
+</div>
+</div>
+</div>
+  
+  <!--Question Area Text Color-->
+<div [hidden] = "this.isActive">
+  <h2>Question Area Text</h2>
+  
+<div id = 'sliders'>
+<h3>Sliders</h3>
+<div class = 'sliderContainer'>
+<div class = 'redLabel'>Red: {{this._data.fontQuestionRed.value}}</div>
+<input type="range" id = 'range4' name = "range1" min="0" max="255"  
+class = 'redSlider' value = {{this._data.fontQuestionRed.value}}
+[ngStyle]="this.sliderDiv(this._data.fontQuestionRed.value, 'red')">
+</div>
+<div class = 'sliderContainer'>
+<div class = 'greenLabel'>Green: {{this._data.fontQuestionGreen.value}}</div>
+<input type="range" id = 'range5' name = "range2" min="0" max="255"  
+class = 'greenSlider' value = {{this._data.fontQuestionGreen.value}}
+[ngStyle]="this.sliderDiv(this._data.fontQuestionGreen.value, 'green')">
+</div>
+<div class = 'sliderContainer'>
+<div class = 'blueLabel'>Blue: {{this._data.fontQuestionBlue.value}}</div>
+<input type="range" id = 'range6' name = "range3" min="0" max="255"  
+class = 'blueSlider' value = {{this._data.fontQuestionBlue.value}}
+[ngStyle]="this.sliderDiv(this._data.fontQuestionBlue.value, 'blue')">
+</div>
+</div>
+<div id = 'manualContainer'>
+<h3>Manual Entry</h3>
 
-<h3 class = "test" [ngStyle]="_data.setStyle('question')">Sample of the question area.</h3>
-
-<h4 class = "answerArea" [ngStyle]="_data.setStyle('answer')">
-<div class = "sampleAnswers">Sample of the answer area.</div>
-<div class = "sampleAnswers">Where multiple choice questions</div>
-<div class = "sampleAnswers">may appear in your quiz depending</div>
-<div class = "sampleAnswers">on the number you choose.</div></h4>
-
-<!--Question Area Background-->
-<h2>Question Area Background</h2>
-<div class = 'paragraphBox'>Question area background <span style="color:red">
-(red value: 0-255)</span>:</div>
-<div class = 'minusBox' (mousedown)="_data.changeBQR(this._data.backgroundQuestionRed, 'minus', 20)" 
-(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">--</div>
-<div class = 'minusBox' (mousedown)="_data.changeBQR(this._data.backgroundQuestionRed, 'minus', 200)"
-(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">-</div>
-<div class = 'inputBox'>{{this._data.backgroundQuestionRed.value}}</div>
-<div class = 'addBox' (mousedown)="_data.changeBQR(this._data.backgroundQuestionRed, 'plus', 200)"
-(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">+</div>
-<div class = 'addBox' (mousedown)="_data.changeBQR(this._data.backgroundQuestionRed, 'plus', 20)"
-(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">++</div>
-
-<div class = 'paragraphBox'>Question area background <span style="color:green">
-(green value: 0-255)</span>: </div>
-<div class = 'minusBox' (mousedown)="_data.changeBQR(this._data.backgroundQuestionGreen, 'minus', 20)"
-(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">--</div>
-<div class = 'minusBox' (mousedown)="_data.changeBQR(this._data.backgroundQuestionGreen, 'minus', 200)"
-(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">-</div>
-<div class = 'inputBox'>{{this._data.backgroundQuestionGreen.value}}</div>
-<div class = 'addBox' (mousedown)="_data.changeBQR(this._data.backgroundQuestionGreen, 'plus', 200)"
-(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">+</div>
-<div class = 'addBox' (mousedown)="_data.changeBQR(this._data.backgroundQuestionGreen, 'plus', 20)"
-(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">++</div>
-
-<div class = 'paragraphBox'>Question area background <span style="color:blue">
-(blue value: 0-255)</span>:</div>
-<div class = 'minusBox' (mousedown)="_data.changeBQR(this._data.backgroundQuestionBlue, 'minus', 20)"
-(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">--</div>
-<div class = 'minusBox' (mousedown)="_data.changeBQR(this._data.backgroundQuestionBlue, 'minus', 200)"
-(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">-</div>
-<div class = 'inputBox'>{{this._data.backgroundQuestionBlue.value}}</div>
-<div class = 'addBox' (mousedown)="_data.changeBQR(this._data.backgroundQuestionBlue, 'plus', 200)"
-(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">+</div>
-<div class = 'addBox' (mousedown)="_data.changeBQR(this._data.backgroundQuestionBlue, 'plus', 20)"
-(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">++</div>
-
-<!--Question Area Text Color-->
-<h2>Question Area Text</h2>
-<div class = 'paragraphBox'>Question area text <span style="color:red">
-(red value: 0-255)</span>:</div>
-<div class = 'minusBox' (mousedown)="_data.changeBQR(this._data.fontQuestionRed, 'minus', 20)"
-(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">--</div>
-<div class = 'minusBox' (mousedown)="_data.changeBQR(this._data.fontQuestionRed, 'minus', 200)"
-(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">-</div>
-<div class = 'inputBox'>{{this._data.fontQuestionRed.value}}</div>
-<div class = 'addBox' (mousedown)="_data.changeBQR(this._data.fontQuestionRed, 'plus', 200)"
-(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">+</div>
-<div class = 'addBox' (mousedown)="_data.changeBQR(this._data.fontQuestionRed, 'plus', 20)"
-(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">++</div>
-
-<div class = 'paragraphBox'>Question area text <span style="color:green">
-(green value: 0-255)</span>: </div>
-<div class = 'minusBox' (mousedown)="_data.changeBQR(this._data.fontQuestionGreen, 'minus', 20)"
-(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">--</div>
-<div class = 'minusBox' (mousedown)="_data.changeBQR(this._data.fontQuestionGreen, 'minus', 200)"
-(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">-</div>
-<div class = 'inputBox'>{{this._data.fontQuestionGreen.value}}</div>
-<div class = 'addBox' (mousedown)="_data.changeBQR(this._data.fontQuestionGreen, 'plus', 200)"
-(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">+</div>
-<div class = 'addBox' (mousedown)="_data.changeBQR(this._data.fontQuestionGreen, 'plus', 20)"
-(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">++</div>
-
-<div class = 'paragraphBox'>Question area text <span style="color:blue">
-(blue value: 0-255)</span>:</div>
-<div class = 'minusBox' (mousedown)="_data.changeBQR(this._data.fontQuestionBlue, 'minus', 20)"
-(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">--</div>
-<div class = 'minusBox' (mousedown)="_data.changeBQR(this._data.fontQuestionBlue, 'minus', 200)"
-(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">-</div>
-<div class = 'inputBox'>{{this._data.fontQuestionBlue.value}}</div>
-<div class = 'addBox' (mousedown)="_data.changeBQR(this._data.fontQuestionBlue, 'plus', 200)"
-(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">+</div>
-<div class = 'addBox' (mousedown)="_data.changeBQR(this._data.fontQuestionBlue, 'plus', 20)"
-(mouseup)="_data.handleMouseUp()" (mouseleave) ="_data.handleMouseUp()">++</div>
-
-<div class = 'button' (click) = "sendPlaces('makeCSS2')">Continue </div>
-
+<label class = 'red' name = 'rgbInput1'>Red:</label>
+<input class = 'redInput' type = 'text' value = {{this._data.fontQuestionRed.value}}>
+<label class = 'green' name = 'rgbInput3'>Green:</label>
+<input class = 'greenInput' type = 'text' value = {{this._data.fontQuestionGreen.value}}>
+<label class = 'blue' name = 'rgbInput2'>Blue:</label>
+<input class = 'blueInput' type = 'text' value = {{this._data.fontQuestionBlue.value}}>
+<div class = 'manualButton' [ngStyle] = "this._data.setStyle('question')" 
+(click) = "this._data.adjustColorRGB(this._data.fontQuestionRed, this._data.fontQuestionGreen, this._data.fontQuestionBlue, 'answer')">Set Color</div>
+<div class = 'separator'> OR </div>
+<label class = 'hex' name = 'hexToRGB'>Insert Hex:</label> 
+<input [ngStyle] = "this.hexInput()" type = 'text' [(ngModel)] = 'this._data.currentHex'>
+<div class = 'hexButton' [ngStyle] = "this._data.setStyle('question')" (click) = "this._data.rgbConvert(this._data.currentHex, this._data.fontQuestionRed, this._data.fontQuestionGreen, this._data.fontQuestionBlue)">Set Color
+</div>
+</div>
+</div>
+  
+  <div class = 'button' (click) = "sendPlaces('makeCSS2')">Continue </div>

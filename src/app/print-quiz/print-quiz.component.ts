@@ -12,7 +12,7 @@ import { QuestionCompilerService } from '../question-compiler.service';
 })
 export class PrintQuizComponent implements OnInit {
 
-  constructor(public router: Router, public _color: ColorChangerService,
+  constructor(public router: Router, public _data: ColorChangerService,
   public _quiz: QuestionCompilerService) { }
 
   ngOnInit() {
