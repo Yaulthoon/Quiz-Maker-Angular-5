@@ -1,16 +1,31 @@
-<div class = 'buttonContainer'>
-<div class = 'buttonRight'  (click) = "sendPlaces('questionairre')"> Back to questions </div>
-<div class = 'buttonLeft'  (click) = "sendPlaces('printQuiz')"> Submit Quiz </div>
+ <div class = 'buttonContainer'>
+<div class = 'buttonRight'  (click) = "sendPlaces('questionairre')">Back</div>
+<button [disabled] = "this._quiz.answersKey.value.length === 0" class = 'buttonMiddle'  (click) = "_scorer.score()">Score</button>
+<div class = 'buttonLeft'  (click) = "sendPlaces('printQuiz')">Finish</div>
 </div>
 
-<div id = "parent" [@loadedQuestion] = "this._quiz.questionsKey.value.length">
-<div class = 'loadedQuestion' *ngFor = "let questions of this._quiz.questionsKey.value; let i = index">
-<h3 class = 'test' [ngStyle]="_color.setStyle('question')">{{questions}}</h3>
-<h4 class = 'answerArea' [ngStyle]="_color.setStyle('answer')">
-<div class = 'sampleAnswers' *ngFor = "let answers of this._quiz.storeAnswersKey.value[i]">{{answers}}</div>
-</h4>
-<div class = 'buttonRightRelative' (click) = "this._quiz.removeQuestions(i)">Delete</div>
+<div *ngIf = "this._scorer.scored" class = 'score'>
+Your current score: {{_scorer.scoring}}.  You currently have {{_scorer.incorrect}} incorrect.  
+If you did not score a 100, please review your questions for mistakes prior to submission.
+  </div>
+  
+  <div id = "parent" [@loadedQuestion] = "this._quiz.questionsKey.value.length">
+  <div class = 'loadedQuestion' *ngFor = "let questions of this._quiz.questionsKey.value; let i = index">
+<h3 class = 'test' [ngStyle]="_data.setStyle('question')">{{questions}}
+<div class = 'buttonRightRelative' (click) = "this._quiz.removeQuestions(i)">Delete</div></h3>
+  <h4 class = 'answerArea' [ngStyle]="_data.setStyle('answer')">
+<div class = 'sampleAnswers' *ngFor = "let answers of this._quiz.storeAnswersKey.value[i]; let j = index">
+<input type = "radio" class = 'radio' name = "answer{{i}}" value = j> <div class = 'answer'>{{answers}}</div>
 </div>
+<div class = "correct" [ngStyle] = "_data.setStyle('answer')">Answer should be: {{this._quiz.answersKey.value[i]}}.</div>
+  </h4>
+  </div>
+  </div>
+  
+<div class = "buttonContainer">
+<div *ngIf = "this._quiz.answersKey.value.length > 2" class = 'buttonMiddle'  (click) = "_scorer.score()" style = "clear: both">
+Score</div></div>
+<div *ngIf = "this._scorer.scored" class = 'score'>
+Your current score: {{_scorer.scoring}}.  You currently have {{_scorer.incorrect}} incorrect.  
+If you did not score a 100, please review your questions for mistakes prior to submission.
 </div>
-
-

@@ -3,7 +3,8 @@ import { Router } from '@angular/router';
 import { trigger,style,transition,animate,keyframes,query,stagger } from '@angular/animations';
 import { QuestionCompilerService } from '../question-compiler.service';
 import { ColorChangerService } from '../color-changer.service';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { QuizScorerService } from '../quiz-scorer.service';
+import { BehaviorSubject } from 'rxjs';
 
 
 @Component({
@@ -26,7 +27,7 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 export class ReviewQuestionsComponent implements OnInit {
 
   constructor(public router: Router, public _quiz: QuestionCompilerService, 
-  public _color: ColorChangerService) { }
+  public _scorer: QuizScorerService, public _data: ColorChangerService) { }
 
   ngOnInit() {
   }

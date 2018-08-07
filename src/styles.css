@@ -1,166 +1,67 @@
-/* You can add global styles to this file, and also import other style files */
 body {
-	background: white;
+ background:#fff
 }
-
+a:active,a:hover {
+ color:#e6f2ff
+}
 #header img {
-	box-sizing: border-box;
-	position: relative;
-	left: 42%;
-	width: 16%;
-	height: auto;
+ box-sizing:border-box;
+ position:relative;
+ left:42%;
+ width:16%;
+ height:auto
 }
-
 #logo {
-    position: absolute;
-    left: 1.5%;
-    top: 1.5%;
-    font: 2.5vw "Berlin Sans FB";
-	color: #00205e;
+ position:absolute;
+ left:1.5%;
+ top:1.5%;
+ font:20pt Arial;
+ color:#00205e
 }
-
 #logo img {
-	height: 100%;
-	
+ height:100%
 }
-
 #navigation {
-	box-sizing: border-box;
-	position: relative;
-	top: 10%;
-	left: 10%;
-	width: 80%;
-	background: radial-gradient(#00205e, #002b80, #003399);
-	padding: 10px 0px 10px 0px;
-	margin: 5vw 0vw 1vw 0vw;
-	border: 2px solid #2E9CE6;
-	border-radius: 5px;
+ box-sizing:border-box;
+ position:relative;
+ top:10%;
+ left:10%;
+ width:80%;
+ background:radial-gradient(#00205e,#002b80,#039);
+ padding:10px 0;
+ margin:5vw 0 1vw;
+ border:2px solid #2e9ce6;
+ border-radius:5px
 }
-
-#navigation h5, a { 
-	display: inline;
-	font: 1.3vw "Arial";
-	color: #ffffff;
-	margin-left: 5.5%;
-	cursor: pointer;
-	text-decoration: underline;
+#navigation h5,a {
+ display:inline;
+ font:1.3vw Arial;
+ color:#fff;
+ margin-left:5.5%;
+ cursor:pointer;
+ text-decoration:underline
 }
-
 #quizMakerBackground {
-	position: relative;
-	margin-top: 1vw;
-	left: 10%;
-	width: 80%;
-	background: radial-gradient( #00205e, #002b80);
-	border: 2px solid #2E9CE6;
-	border-radius: 5px;
+ position:relative;
+ margin-top:1vw;
+ left:10%;
+ width:80%;
+ background:radial-gradient(#00205e,#002b80);
+ border:2px solid #2e9ce6;
+ border-radius:5px
 }
-
 #quizMakerForeground {
-	box-sizing: border-box;
-	position: relative;
-	width: 96%;
-	height: auto;
-	margin: 2%;
-	background-color: #ffffff;
-	border: 2px solid #2E9CE6;
-	overflow-y: auto;
-	overflow-x: hidden;
-	border-radius: 5px;
-}
-
-#quizMakerForeground h1 {
-	position: relative;
-	font: 20pt "Berlin Sans FB";
-	color: #00205e;
-	text-align: center;
-	margin-top: 15px;
-	margin-bottom: 10px;
-	width: 100%;
-	left: 0%;
-	top: 100%;
-}
-
-#quizMakerForeground h2 {
-	display: block;
-	box-sizing: border-box;
-	position: relative;
-	font: 16pt "Berlin Sans FB";
-	color: #00205e;
-	text-align: center;
-	margin-top: 7px;
-	margin-bottom: 7px;
-	width: 100%;
-	float: left;
-	text-decoration: underline;
-}
-
-#quizMakerForeground h3 {
-	box-sizing: border-box;
-	padding: 5px;
-	margin: 0px 10px 0px 10px;
-	color: #000000;
-}
-
-#quizMakerForeground h4 {
-	box-sizing: border-box;
-	padding: 5px;
-	margin: 0px 10px 5px 10px;
-}
-
-#quizMakerForeground h5 {
-	display: block;
-	box-sizing: border-box;
-	position: relative;
-	font: 16pt "Berlin Sans FB";
-	color: #990000;
-	text-align: center;
-	margin-top: -13px;
-	margin-bottom: 10px;
-	width: 100%;
-	text-decoration: underline;
-}
-
-#quizMakerForeground ol li {
-	color: #4CAF50;
-	font: bold 13pt "Arial";
-	text-align: left;
-	padding-left: 0px;
-}
-
-#quizMakerForeground .sampleAnswers {
-	box-sizing: border-box;
-	padding: 0px;
-	margin: 0px;
-	font-size: 100%;
-}
-
-#quizMakerForeground input[type="text"] {
-	position: relative;
-	box-sizing: border-box;
-	width: 90%;
-	margin: 7px 0px 10px 0px;
-	text-align: left;
-	padding: 1.5px 10px 1.5px 10px;
-}
-
-#quizMakerForeground input[type="radio"] {
-	box-sizing: border-box;
-	position: relative;
-	width: 8.3%;
-	margin: 7px 0px 10px 0px;
-	padding-right: 10px;
-}
-
-#quizMakerForeground p {
-	position: relative;
-	box-sizing: border-box;
-	padding: 5px 10px 5px 5px;
-	margin: 2px 0px 2px 0px;
-	width: 100%;
-	left: 0%;
-	font: bold 12pt "Arial";
-	color: #00205e;
+ box-sizing:border-box;
+ position:relative;
+ width:96%;
+ min-height:30vh;
+ height:auto;
+ margin:2%;
+ background-color:#fff;
+ border:2px solid #2e9ce6;
+ overflow-y:auto;
+ overflow-x:hidden;
+ border-radius:5px
 }
 
 #quizMakerForeground section {
@@ -171,140 +72,344 @@ body {
 	left: 0%;
 	font: bold 13pt "Arial";
 	color: #00205e;
-}	
+} 
 
-	
+#quizMakerForeground h1 {
+ box-sizing:border-box;
+ position:relative;
+ font:20pt Arial;
+ color:#00205e;
+ text-align:center;
+ margin-top:15px;
+ margin-bottom:30px;
+ width:100%;
+ left:0
+}
+#quizMakerForeground .toggleBox {
+ box-sizing:border-box;
+ position:absolute;
+ top:50px;
+ left:42%;
+ width:16%;
+ border:2px solid #00205e;
+ z-index:2
+}
+#quizMakerForeground .toggleBG,#quizMakerForeground .toggleText {
+ box-sizing:border-box;
+ position:relative;
+ float:left;
+ width:50%;
+ font-size:1.3vw;
+ text-align:center;
+ cursor:pointer
+}
+#trial,h2 {
+ box-sizing:border-box;
+ position:relative;
+ font:700 16pt Arial;
+ color:#00205e;
+ text-align:center;
+ margin-top:5px;
+ width:90%;
+ left:5%;
+ clear:both;
+ text-decoration:underline
+}
+#quizMakerForeground h3 {
+ position:relative;
+ box-sizing:border-box;
+ padding:5px 5px 5px 20px;
+ margin:0;
+ width:90%;
+ left:5%;
+ color:#000
+}
+#quizMakerForeground h4 {
+ position:relative;
+ box-sizing:border-box;
+ width:90%;
+ left:5%;
+ padding:5px 5px 5px 20px;
+ margin:0
+}
+#quizMakerForeground h5 {
+ display:block;
+ box-sizing:border-box;
+ position:relative;
+ font:16pt Arial;
+ color:#900;
+ text-align:center;
+ margin-top:-16px;
+ margin-bottom:20px;
+ width:100%;
+ text-decoration:underline
+}
+#quizMakerForeground ol li {
+ color:#4caf50;
+ font:bold 13pt Arial;
+ text-align:left;
+ padding-left:0
+}
+#quizMakerForeground .sampleAnswers {
+ box-sizing:border-box;
+ padding:0;
+ margin:0
+}
+#quizMakerForeground p {
+ position:relative;
+ box-sizing:border-box;
+ padding:5px 10px 5px 5px;
+ margin:2px 0;
+ width:100%;
+ left:0;
+ font:bold 12pt Arial;
+ color:#00205e
+}
+.aboutSection {
+ position:relative;
+ box-sizing:border-box;
+ margin:15px 25px 5px;
+ width:100%;
+ left:0;
+ font:bold 13pt Arial;
+ color:#00205e
+}
 .button {
-	box-sizing: border-box;
-	position: relative;
-	margin: 15px 0px 5px 0px;
-	width: 16%;
-	clear: left;
-	left: 42%;
-	padding: 5px;
-	color: #ffffff;
-	background: radial-gradient(#367c39, #4CAF50);
-	font: bold 100% "Arial";
-	text-align: center;
-	border: 2px solid #00205e;
-	border-radius: 5px;
-	cursor: pointer;
+ box-sizing:border-box;
+ position:relative;
+ margin:15px 0 5px;
+ width:16%;
+ clear:left;
+ left:42%;
+ padding:5px;
+ color:#fff;
+ background:radial-gradient(#367c39,#4caf50);
+ font:bold 12pt Arial;
+ text-align:center;
+ border:2px solid #00205e;
+ border-radius:5px;
+ cursor:pointer
 }
-
 .buttonContainer {
-	clear: both;
-	box-sizing: border-box;
-	position: relative;
-	width: 100%;
-	left: 0%;
-	height: 5%;
-	margin: 0px 0px 60px 0px;
-	font: bold 100% "Arial";
-	text-align: center;
+ clear:both;
+ box-sizing:border-box;
+ display:inline-block;
+ position:relative;
+ width:100%;
+ left:0;
+ height:5%;
+ margin:0 0 60px;
+ font:bold 100% Arial;
+ text-align:center
 }
-
 .buttonContainer2 {
-	clear: both;
-	box-sizing: border-box;
-	position: fixed;
-	width: 70%;
-	left: 15%;
-	height: 20%;
-	top: 30%;
-	margin: 0px 0px 60px 0px;
-	font: bold 100% "Arial";
-	text-align: center;
-	border: 1px solid black;
+ clear:both;
+ display:inline-block;
+ box-sizing:border-box;
+ position:fixed;
+ width:70%;
+ left:15%;
+ height:20%;
+ top:30%;
+ margin:0 0 60px;
+ font:bold 100% Arial;
+ text-align:center;
+ border:1px solid #000
 }
-
 .buttonLeft {
-	box-sizing: border-box;
-	margin: 15px 0px 25px 0px;
-	clear: left;
-	position: absolute;
-	width: 16%;
-	left: 65%;
-	padding: 5px;
-	color: #ffffff;
-	background: radial-gradient(#367c39, #4CAF50);
-	font: bold 100% "Arial";
-	text-align: center;
-	border: 2px solid #00205e;
-	border-radius: 5px;
-	cursor: pointer;
+ box-sizing:border-box;
+ margin:15px 0 25px;
+ clear:left;
+ position:absolute;
+ width:16%;
+ left:65%;
+ padding:5px;
+ color:#fff;
+ background:radial-gradient(#367c39,#4caf50);
+ font:bold 100% Arial;
+ text-align:center;
+ border:2px solid #00205e;
+ border-radius:5px;
+ cursor:pointer
 }
-
+.buttonMiddle {
+ box-sizing:border-box;
+ margin:15px 0 25px;
+ clear:left;
+ position:absolute;
+ width:16%;
+ left:42%;
+ padding:5px;
+ color:#fff;
+ background:radial-gradient(#367c39,#4caf50);
+ font:bold 100% Arial;
+ text-align:center;
+ border:2px solid #00205e;
+ border-radius:5px;
+ cursor:pointer
+}
 .buttonRight {
-	box-sizing: border-box;
-	position: absolute;
-	margin: 15px 0px 25px 0px;
-	width: 16%;
-	top: 100%;
-	right: 65%;
-	padding: 5px;
-	color: #ffffff;
-	background: radial-gradient(#367c39, #4CAF50);
-	font: bold 100% "Arial";
-	text-align: center;
-	border: 2px solid #00205e;
-	border-radius: 5px;
-	cursor: pointer;
+ box-sizing:border-box;
+ position:absolute;
+ margin:15px 0 25px;
+ width:16%;
+ top:100%;
+ right:65%;
+ padding:5px;
+ color:#fff;
+ background:radial-gradient(#367c39,#4caf50);
+ font:bold 100% Arial;
+ text-align:center;
+ border:2px solid #00205e;
+ border-radius:5px;
+ cursor:pointer
 }
-
 .buttonRightRelative {
-	box-sizing: border-box;
-	position: relative;
-	margin: 8px 0px 15px 0px;
-	width: 10%;
-	left: 1.5%;
-	padding: 5px;
-	color: #ffffff;
-	background: radial-gradient(#990000, #e60000);
-	font: bold 100% "Arial";
-	text-align: center;
-	border: 2px solid #00205e;
-	border-radius: 5px;
-	cursor: pointer;
+ box-sizing:border-box;
+ position:relative;
+ margin:8px 5% 15px 15px;
+ width:10%;
+ float:right;
+ padding:5px;
+ color:#fff;
+ background:radial-gradient(#900,#e60000);
+ font:bold 100% Arial;
+ text-align:center;
+ border:2px solid #00205e;
+ border-radius:5px;
+ cursor:pointer;
+ z-index:2
 }
-
 .paragraphBox {
-	box-sizing: border-box;
-	position: relative;
-	width: 56%;
-	margin: 10px;
-	text-align: left;
-	float: left;
-	padding-left: 13%; 
-	color: #00205e;
-	font-weight: bold;
+ box-sizing:border-box;
+ position:relative;
+ width:56%;
+ margin:10px;
+ text-align:left;
+ float:left;
+ padding-left:13%;
+ color:#00205e;
+ font-weight:700
 }
-
 .inputBox {
-	display: inline-block;
-	box-sizing: border-box;
-	position: relative;
-	margin: 13px 0px 10px 0px;
-	float: left;
-	width: 4%;
-	text-align: center;
+ display:inline-block;
+ box-sizing:border-box;
+ position:relative;
+ margin:13px 0 10px;
+ float:left;
+ width:4%;
+ text-align:center
 }
-
-.addBox, .minusBox {
-	display: inline-block;
-	box-sizing: border-box;
-	position: relative;
-	margin: 10px 5px 10px 5px;
-	float: left;
-	width: 4%;
-	font-size: 1.5vw;
-	text-align: center;
-	border: 2px solid #4CAF50;
-	border-radius: 5px;
-	cursor: pointer;
+.addBox,.minusBox {
+ display:inline-block;
+ box-sizing:border-box;
+ position:relative;
+ margin:10px 5px;
+ float:left;
+ width:4%;
+ font-size:1.5vw;
+ text-align:center;
+ border:2px solid #4caf50;
+ border-radius:5px;
+ cursor:pointer;
+ -moz-user-select:none;
+ -ms-user-select:none;
+ user-select:none;
+ -webkit-user-select:none
 }
-
 .about {
-	color: #000000;
-	font: "Times New Roman" 12pt;
-	padding: 0px 25px 0px 25px;
+ color:#000;
+ font:12pt Times;
+ padding:0 25px;
+}
+
+@media only screen and (max-width:768px) {
+ #quizMakerBackground {
+  width:100%;
+  left:0;
+ }
+ #quizMakerForeground h3,h4 {
+  box-sizing:border-box;
+  width:90%;
+  left:5%;
+  padding:5px;
+  text-align:left;
+  margin:0
+ }
+ #navigation {
+  margin-top:15%;
+  width:100%;
+  left:0;
+  overflow:auto
+ }
+ #navigation a {
+  box-sizing:border-box;
+  padding:7px 5px;
+  float:left;
+  width:25%;
+  text-align:center;
+  font-size:5vw
+ }
+ .paragraphBox {
+  width:90%;
+  float:left;
+  margin:5px 10px 0 5px;
+  padding:5px;
+  text-align:left;
+  font-size:5vw
+ }
+ .addBox,.minusBox {
+  box-sizing:border-box;
+  width:15%;
+  font-size:5vw;
+  float:left;
+  text-align:center;
+  margin:2.4%
+ }
+ .inputBox {
+  box-sizing:border-box;
+  width:15%;
+  float:left;
+  margin:2%;
+  padding:2.5px;
+  font-size:5vw
+ }
+ #logo {
+  position:absolute;
+  width:100%;
+  left:0;
+  font:6vw Arial;
+  text-align:center;
+  color:#00205e
+ }
+ .button {
+  width:50%;
+  left:25%;
+  font-size:4vw;
+  margin-bottom:20px
+ }
+ .buttonLeft {
+  left:70%;
+ }
+ .buttonRight {
+  left:5%;
+ }
+ .buttonMiddle {
+  left:37%;
+ }
+ .buttonLeft,.buttonMiddle,.buttonRight,.buttonRightRelative {
+  width:25%;
+  font-size:4vw
+ }
+ .about {
+  margin:0 5% 0 0;
+ }
+ .aboutSection {
+  margin:2% 0;
+  position:relative;
+  box-sizing:border-box;
+  text-align:center;
+  width:90%;
+  left:5%
+ }
 }

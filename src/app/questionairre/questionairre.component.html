@@ -1,19 +1,31 @@
-<h1 id = 'tester'>Please fill in your quiz based on the template below.</h1>
-
-<h5>Make sure to select the correct answer before continuing to the next question.</h5>
-
-
-<h3 class = "test" [ngStyle]="_color.setStyle('question')">Question:  <input type = "text" name = "questionsText"></h3>
-
-<h4 class = "answerArea" [ngStyle]="_color.setStyle('answer')">
-<input type = "radio" name = "answers" value = 0><input type = "text" name = "answersText">
-<input type = "radio" name = "answers" value = 0><input type = "text" name = "answersText">
-<input type = "radio" name = "answers" value = 0><input type = "text" name = "answersText">
-<input type = "radio" name = "answers" value = 0><input type = "text" name = "answersText">
-</h4>
-
-<div class = 'buttonContainer'>
-<div class = 'buttonRight' (click)="sendPlaces('makeCSS2')"> Back </div>
-<div class = 'button' (click)="this._quiz.collectData()"> Add Question </div>
-<div class = 'buttonLeft' (click)="sendPlaces('reviewQuestions')"> Review </div>
+<h1 id = 'tester'>Add your questions with the template below.  
+At least two answers are required.</h1>
+  
+<h5 *ngIf = "this._quiz.error">
+Make sure to select the correct answer before continuing to the next question.  
+</h5>
+  
+<form (ngSubmit) = "this._quiz.showData()" #questionMaker = "ngForm">
+<div class = "question" [ngStyle] = "_color.setStyle('question')">
+<h2>Question</h2>
+<input type = "text" [(ngModel)] = "this._quiz.question" name = "question" required>
 </div>
+  
+<div class = "answerArea" [ngStyle] = "_color.setStyle('answer')">
+<h2 class = "test">Answers</h2>
+<input type = "radio" [(ngModel)] = "this._quiz.selected" name = "selected" value = {{this._quiz.answer.choice1}}>
+<input type = "text"  [(ngModel)] = "this._quiz.answer.choice1" name = "choice1" required>
+<input type = "radio" [(ngModel)] = "this._quiz.selected" name = "selected" value = {{this._quiz.answer.choice2}}>
+<input type = "text" [(ngModel)] = "this._quiz.answer.choice2" name = "choice2" required>
+<input type = "radio" [(ngModel)] = "this._quiz.selected" name = "selected" value = {{this._quiz.answer.choice3}}>
+<input type = "text" [(ngModel)] = "this._quiz.answer.choice3" name = "choice3">
+<input type = "radio" [(ngModel)] = "this._quiz.selected" name = "selected" value = {{this._quiz.answer.choice4}}>
+<input type = "text" [(ngModel)] = "this._quiz.answer.choice4" name = "choice4">
+</div>
+  
+  <div class = 'buttonContainer'>
+<div class = 'buttonRight' (click)="sendPlaces('makeCSS2')">Back</div>
+<button type = "submit" [disabled] = "!questionMaker.form.valid" class = 'buttonMiddle'>Add</button>
+<div class = 'buttonLeft' (click)="sendPlaces('reviewQuestions')">Review</div>
+  </div>
+</form>

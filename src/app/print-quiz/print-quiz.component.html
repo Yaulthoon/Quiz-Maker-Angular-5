@@ -1,176 +1,160 @@
-<h1>Finishing Steps</h1>
+ <h1>Finishing Steps</h1>
+  
+<div [ngStyle] = "{'margin': '0px 5% 0px 5%'}">
+  <ol>
+  <li>Copy the below code.</li>
+  <li>Paste the code into a notepad or similar document.</li>
+  <li>If you have access to a web server, you can try opening your saved 
+   in your browser.  It will load as a local web page.</li>
+  </ol>
+  <p>&#60;!DOCTYPE html&#62;</p>
+  <p>&#60;html&#62;</p>
+  <p> &#60;head&#62; </p>
+  <p> &#60;style&#62; </p> <br/>
+  
+  .test {{'{'}} <br/>
+box-sizing: border-box; <br/>
+padding: 5px; <br/>
+margin: 25px 10px 0px 10px; <br/>
+color: rgb({{this._data.fontQuestionRed.value}}, {{this._data.fontQuestionGreen.value}}, {{this._data.fontQuestionBlue.value}}); <br/>
+background-color: rgb({{this._data.backgroundQuestionRed.value}}, {{this._data.backgroundQuestionGreen.value}}, {{this._data.backgroundQuestionBlue.value}}); <br/>
+width: 80%; <br/>
+position: relative; <br/>
+left: 10%; <br/>
+{{'}'}} <br/> <br/>
 
-<ol>
-<li>Copy the below code.</li>
-<li>Paste the code into a notepad or similar document.</li>
-<li>Save the file as a .html extension.  Example:  quiz.html.</li>
-<li>Host your quiz on your server. Alternatively,  if you do not have 
-access to a web server, you can try opening your saved 
-file in your browser.  It will load as a local web page.</li>
-</ol>
-<div [ngStyle] = "{'padding': '0px 30px 0px 30px'}">
-<p>&#60;!DOCTYPE html&#62;</p>
-<p>&#60;html&#62;</p>
-
-<p>&#60;head&#62;</p>
-
-<p>&#60;style&#62;</p><br/>
-.test {{'{'}} <br/>
-	box-sizing: border-box; <br/>
-	padding: 5px; <br/>
-	margin: 25px 10px 0px 10px; <br/>
-	color: rgb({{this._color.fontQuestionRed.value}},
-	{{this._color.fontQuestionGreen.value}},
-	{{this._color.fontQuestionBlue.value}}); <br/>
-	background-color: rgb({{this._color.backgroundQuestionRed.value}},
-	{{this._color.backgroundQuestionGreen.value}},
-	{{this._color.backgroundQuestionBlue.value}}); <br/>
-	width: 80%; <br/>
-	position: relative; <br/>
-	left: 10%; <br/>
-	{{'}'}} <br/><br/>
-	
 .answerArea {{'{'}} <br/>
-	box-sizing: border-box; <br/>
-	padding: 5px; <br/>
-	margin: 0px 10px 0px 10px; <br/>
-	color: rgb({{this._color.fontAnswerRed.value}},
-	{{this._color.fontAnswerGreen.value}},
-	{{this._color.fontAnswerBlue.value}}); <br/>
-	background-color: rgb({{this._color.backgroundAnswerRed.value}},
-	{{this._color.backgroundAnswerGreen.value}},
-	{{this._color.backgroundAnswerBlue.value}}); <br/>
-	width: 80%; <br/>
-	position: relative; <br/>
-	left: 10%; <br/>
-	{{'}'}} <br/><br/>
-	
+box-sizing: border-box; <br/>
+padding: 5px; <br/>
+margin: 0px 10px 0px 10px; <br/>
+color: rgb({{this._data.fontAnswerRed.value}}, {{this._data.fontAnswerGreen.value}}, {{this._data.fontAnswerBlue.value}}); <br/>
+background-color: rgb({{this._data.backgroundAnswerRed.value}}, {{this._data.backgroundAnswerGreen.value}}, {{this._data.backgroundAnswerBlue.value}}); <br/>
+width: 80%; <br/>
+position: relative; <br/>
+left: 10%; <br/>
+{{'}'}} <br/> <br/>
+
 .score {{'{'}} <br/>
-	box-sizing: border-box; <br/>
-	padding: 5px; <br/>
-	margin: 15px 10px 0px 5px; <br/>
-	color: rgb({{this._color.fontQuestionRed.value}},
-	{{this._color.fontQuestionGreen.value}},{{this._color.fontQuestionBlue.value}}); <br/>
-	background-color: rgb({{this._color.backgroundQuestionRed.value}},
-	{{this._color.backgroundQuestionGreen.value}},{{this._color.backgroundQuestionBlue.value}}); <br/>
-	width: 8%; <br/>
-	position: relative; <br/>
-	left: 10%; <br/>
-	cursor: pointer; <br/>
-	border: 1pt solid black; <br/>
-	text-align: center; <br/>
-	{{'}'}} <br/><br/>
-	
+box-sizing: border-box; <br/>
+padding: 5px; <br/>
+margin: 15px 10px 0px 5px; <br/>
+color: rgb({{this._data.fontQuestionRed.value}}, {{this._data.fontQuestionGreen.value}},{{this._data.fontQuestionBlue.value}}); <br/>
+background-color: rgb({{this._data.backgroundQuestionRed.value}}, {{this._data.backgroundQuestionGreen.value}},{{this._data.backgroundQuestionBlue.value}}); <br/>
+width: 8%; <br/>
+position: relative; <br/>
+left: 10%; <br/>
+cursor: pointer; <br/>
+border: 1pt solid black; <br/>
+text-align: center; <br/>
+{{'}'}} <br/> <br/>
+
 #scoreboard {{'{'}} <br/>
-	box-sizing: border-box; <br/>
-	padding: 5px; <br/>
-	margin: 5px 10px 0px 10px; <br/>
-	color: #000000; <br/>
-	background-color: #FFFFFF; <br/>
-	width: 80%; <br/>
-	position: relative; <br/>
-	left: 10%; <br/>
-	{{'}'}} <br/><br/>
+box-sizing: border-box; <br/>
+padding: 5px; <br/>
+margin: 5px 10px 0px 10px; <br/>
+color: #000000; <br/>
+background-color: #FFFFFF; <br/>
+width: 80%; <br/>
+position: relative; <br/>
+left: 10%; <br/>
+{{'}'}} <br/> <br/>
+	
+.answer {{'{'}} <br/>
+display: inline; <br/>
+{{'}'}} <br/><br/>
+  
+  <p>&#60;/style&#62;</p>
+  <p>&#60;/head&#62;</p>
+  <p> &#60;body onload = "loadQuiz()"&#62; </p> <br/>
+  &#60;div id = "quizArea"&#62; &#60;/div&#62;
 
-<p>&#60;/style&#62;</p>
+  <p>&#60;script&#62;</p>
+  
+  const questions = [<span *ngFor="let questions of this._quiz.questionsKey.value; 
+let i = index; let lastItem = last;">"{{this._quiz.questionsKey.value[i]}}"
+  <span *ngIf="!lastItem">, </span></span>]; <br/>
+  
+  const answerList = [<span *ngFor = "let answers of this._quiz.storeAnswersKey.value; 
+  let i = index; let lastItem = last;">[
+  <span *ngFor = "let choices of this._quiz.storeAnswersKey.value[i]; let lastChoice = last;">
+"{{choices}}"<span *ngIf="!lastChoice">,</span></span>]<span *ngIf="!lastItem">,</span></span>]; <br/>
+  
+  
+  const key = [<span *ngFor="let answers of this._quiz.answersKey.value; 
+let i = index; let lastItem = last;">"{{this._quiz.answersKey.value[i]}}"
+  <span *ngIf="!lastItem">, </span></span>]; <br/>
+  
+  const userKey = []; <br/><br/>
+  
+const userAnswers = []; <br/><br/>
 
-<p>&#60;/head&#62;</p>
-
-<p>&#60;body onload = "loadQuiz()"&#62;</p>
-
-<p>&#60;div id = "quizArea"&#62;&#60;/div&#62;</p>
-
-<p>&#60;script&#62;</p>
-
-const questions = [<span *ngFor="let questions of this._quiz.questionsKey.value; 
-let i = index; let lastItem = last;">'{{this._quiz.questionsKey.value[i]}}'
-<span *ngIf="!lastItem">, </span></span>]; <br/>
-
-const answerList = [<span *ngFor = "let answers of this._quiz.storeAnswersKey.value; 
-let i = index; let lastItem = last;">[
-<span *ngFor = "let choices of this._quiz.storeAnswersKey.value[i]; let lastChoice = last;">
-'{{choices}}'<span *ngIf="!lastChoice">,</span></span>]<span *ngIf="!lastItem">,</span></span>]; <br/>
-
-
-const key = [<span *ngFor="let answers of this._quiz.answersKey.value; 
-let i = index; let lastItem = last;">'{{this._quiz.answersKey.value[i]}}'
-<span *ngIf="!lastItem">, </span></span>]; <br/>
-
-const userKey = []; <br/><br/>
-
-function loadQuiz () {{'{'}} <br/>
-	for (i = 0; i < answerList.length; i++) {{'{'}} <br/>
-		document.getElementById("quizArea").innerHTML += <br/>
-		"&#60;div class = 'test'&#62;" + (i+1) + ". " + questions[i] + "&#60;/div&#62;" + <br/>
-		"&#60;div class = 'answerArea'&#62;" + <br/>
-		"&#60;input type = 'radio' class = 'answers' + name ='" + i + "'value = 0&#62;" + "&#60;/input&#62;" + <br/>
-		answerList[i][0] + "&#60;/div&#62;";<br/>
-		if (typeof answerList[i][1] === "undefined") {{'{'}} <br/>
-		{{'}'}} else {{'{'}} <br/>
-		document.getElementById("quizArea").innerHTML += <br/>
-		"&#60;div class = 'answerArea'&#62;" + <br/>
-		"&#60;input type = 'radio' class = 'answers' name ='" + i + "'value = 1&#62;" + "&#60;/input&#62;" + <br/>
-		answerList[i][1] + "&#60;/div&#62;"; <br/>
-		if (typeof answerList[i][2] === "undefined") {{'{'}} <br/>
-		{{'}'}} else {{'{'}} <br/>
-		document.getElementById("quizArea").innerHTML +=
-		"&#60;div class = 'answerArea'&#62;" + <br/>
-		"&#60;input type = 'radio' class = 'answers' name ='" + i + "'value = 2&#62;" + "&#60;/input&#62;" + <br/>
-		answerList[i][2] + "&#60;/div&#62;"; <br/>
-		if (typeof answerList[i][3] === "undefined") {{'{'}} <br/>
-		{{'}'}} else {{'{'}} <br/>
-		document.getElementById("quizArea").innerHTML += <br/>
-		"&#60;div class = 'answerArea'&#62;" + <br/>
-		"&#60;input type = 'radio' class = 'answers' name ='" + i + "'value = 3&#62;" + "&#60;/input&#62;" + <br/>
-		answerList[i][3] + "&#60;/div&#62;"; <br/>
-	{{'}'}} <br/>
-	{{'}'}} <br/>
-	{{'}'}} <br/>
-	{{'}'}} <br/>
+  function loadQuiz () {{'{'}} <br/>
+  	for (i = 0; i < answerList.length; i++) {{'{'}} <br/>
+  		document.getElementById("quizArea").innerHTML += <br/>
+  		"&#60;div class = 'test'&#62;" + (i+1) + ". " + questions[i] + "&#60;/div&#62;" + <br/>
+  		"&#60;div class = 'answerArea'&#62;" + <br/>
+		"&#60;input type = 'radio' class = 'answers' + name ='" + i + "'value = 0&#62;" + "&#60;/input&#62;" + "&#60;div class = 'answer'&#62;" + <br/>
+		answerList[i][0] + "&#60;/div&#62; &#60;/div&#62;";<br/>
+  		if (typeof answerList[i][1] === "undefined") {{'{'}} <br/>
+  		{{'}'}} else {{'{'}} <br/>
+  		document.getElementById("quizArea").innerHTML += <br/>
+  		"&#60;div class = 'answerArea'&#62;" + <br/>
+		"&#60;input type = 'radio' class = 'answers' name ='" + i + "'value = 1&#62;" + "&#60;/input&#62;" + "&#60;div class = 'answer'&#62;" + <br/>
+		answerList[i][1] + "&#60;/div&#62; &#60;/div&#62;"; <br/>
+  		if (typeof answerList[i][2] === "undefined") {{'{'}} <br/>
+  		{{'}'}} else {{'{'}} <br/>
+  		document.getElementById("quizArea").innerHTML +=
+  		"&#60;div class = 'answerArea'&#62;" + <br/>
+		"&#60;input type = 'radio' class = 'answers' name ='" + i + "'value = 2&#62;" + "&#60;/input&#62;" + "&#60;div class = 'answer'&#62;" + <br/>
+		answerList[i][2] + "&#60;/div&#62; &#60;/div&#62;"; <br/>
+  		if (typeof answerList[i][3] === "undefined") {{'{'}} <br/>
+  		{{'}'}} else {{'{'}} <br/>
+  		document.getElementById("quizArea").innerHTML += <br/>
+  		"&#60;div class = 'answerArea'&#62;" + <br/>
+		"&#60;input type = 'radio' class = 'answers' name ='" + i + "'value = 3&#62;" + "&#60;/input&#62;" + "&#60;div class = 'answer'&#62;" + <br/>
+		answerList[i][3] + "&#60;/div&#62; &#60;/div&#62;"; <br/>
+  	{{'}'}} <br/>
+  	{{'}'}} <br/>
+{{'}'}} <br/>
+  	{{'}'}} <br/>
 	document.getElementById("quizArea").innerHTML += <br/>
 	"&#60;div class = 'score' onclick = 'score()' &#62; Score &#60;/div&#62;" + <br/>
 	"&#60;div id = 'scoreboard'&#62;&#60;/div&#62;"; <br/>
-{{'}'}} <br/><br/>
-
+	{{'}'}}<br/><br/>
+	
 function score () {{'{'}} <br/>
-	var correct = 0; <br/>
 	var answerLen = 0; <br/>
-	var gatherAnswers = document.getElementsByClassName('answerArea'); <br/>
-	var gatherQuestions = document.getElementsByClassName('test');<br/>
-	var gatherQuest = document.getElementsByClassName('answers'); <br/>
-	for (i = 0; i < gatherQuest.length; i++) {{'{'}} <br/>
-	if (gatherQuest[i].checked) {{'{'}} <br/>
-		userKey.push(gatherQuest[i].value); <br/>
-		{{'}'}} <br/>
+	var correct = 0; <br/>
+  	var gatherAnswers = document.getElementsByClassName('answerArea'); <br/>
+  	var gatherQuestions = document.getElementsByClassName('test');<br/>
+  	var gatherQuest = document.getElementsByClassName('answers'); <br/>
+	var answerKey = document.getElementsByClassName('answer'); <br/>
+  	for (i = 0; i < gatherQuest.length; i++) {{'{'}} <br/>
+  	if (gatherQuest[i].checked) {{'{'}} <br/>
+  		userKey.push(gatherQuest[i].value); <br/>
+		userAnswers.push(answerKey[i].innerHTML); <br/>
+  		{{'}'}} <br/>
+  	{{'}'}} <br/>
+  	for (j = 0; j < key.length; j++) {{'{'}} <br/>
+	var ans = answerLen + parseInt(userKey[j]); <br/>
+	if (key[j] === userAnswers[j]) {{'{'}} <br/>
+  		correct += 1; <br/>
+  		gatherQuestions[j].style.backgroundColor = '#006600'; <br/>
+  		gatherQuestions[j].style.color = 'white'; <br/>
+  
+  		{{'}'}} <br/>
+	else if (key[j] !== userAnswers[j]) {{'{'}} <br/>
+  		gatherQuestions[j].style.backgroundColor = '#990000'; <br/>
+  		gatherQuestions[j].style.color = 'white'; <br/>
+		gatherQuestions[j].innerHTML += "&#60;/br&#62;" + "The correct answer was " + <br/>
+		key[j]; <br/>
+  	{{'}'}} <br/>
+  	answerLen += answerList[j].length; <br/>
+  	{{'}'}} <br/>
+	document.getElementById('scoreboard').innerHTML = "Your score is " + 
+	Math.round((correct/gatherQuestions.length) * 100) + " you got " + (gatherQuestions.length - correct) + " incorrect.";
 	{{'}'}} <br/>
-	for (j = 0; j < key.length; j++) {{'{'}} <br/>
-	var ans = answerLen + parseInt(key[j]); <br/>
-	if (key[j] === userKey[j]) {{'{'}} <br/>
-		correct += 1; <br/>
-		gatherQuestions[j].style.backgroundColor = '#006600'; <br/>
-		gatherQuestions[j].style.color = 'white'; <br/>
-
-		{{'}'}} <br/>
-	if (key[j] !== userKey[j]) {{'{'}} <br/>
-		gatherAnswers[ans].style.backgroundColor = "#006600"; <br/>
-		gatherAnswers[ans].style.color = 'white'; <br/>
-		gatherQuestions[j].style.backgroundColor = '#990000'; <br/>
-		gatherQuestions[j].style.color = 'white'; <br/>
-		gatherQuestions[j].innerHTML += "&#60;/br&#62;" + "The correct answer was choice # " + <br/>
-		(parseInt(key[j]) + 1); <br/>
-	{{'}'}} <br/>
-	answerLen += answerList[j].length; <br/>
-	{{'}'}} <br/>
-	document.getElementById("scoreboard").innerHTML = <br/>
-	Math.floor(correct/key.length * 100) + ".	You got " + <br/>
-	correct + " out of " + key.length + " correct."; <br/>
-	document.getElementsByClassName('score')[0].style.visibility = 'hidden'; <br/>
-{{'}'}} <br/><br/>
-
-<p>&#60;/script&#62;</p>
-
-<p>&#60;/body&#62;</p>
-
-<p>&#60;/html&#62;</p>
-
-</div>
+	
+	<p> &#60;/script&#62; </p> <br/>
+	<p> &#60;/body&#62; </p> <br/>
+	<p> &#60;/html&#62; </p> <br/>
