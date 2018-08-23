@@ -3,7 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+<<<<<<< HEAD
     "quiz-maker": {
+=======
+    "Fetcher": {
+>>>>>>> e2db9c586eb194cf5359a37623fd8e84ea89323c
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -50,18 +54,30 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
+<<<<<<< HEAD
             "browserTarget": "quiz-maker:build"
           },
           "configurations": {
             "production": {
               "browserTarget": "quiz-maker:build:production"
+=======
+            "browserTarget": "Fetcher:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "Fetcher:build:production"
+>>>>>>> e2db9c586eb194cf5359a37623fd8e84ea89323c
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
+<<<<<<< HEAD
             "browserTarget": "quiz-maker:build"
+=======
+            "browserTarget": "Fetcher:build"
+>>>>>>> e2db9c586eb194cf5359a37623fd8e84ea89323c
           }
         },
         "test": {
@@ -95,7 +111,11 @@
         }
       }
     },
+<<<<<<< HEAD
     "quiz-maker-e2e": {
+=======
+    "Fetcher-e2e": {
+>>>>>>> e2db9c586eb194cf5359a37623fd8e84ea89323c
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +123,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
+<<<<<<< HEAD
             "devServerTarget": "quiz-maker:serve"
           },
           "configurations": {
             "production": {
               "devServerTarget": "quiz-maker:serve:production"
+=======
+            "devServerTarget": "Fetcher:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "Fetcher:serve:production"
+>>>>>>> e2db9c586eb194cf5359a37623fd8e84ea89323c
             }
           }
         },
@@ -123,5 +151,9 @@
       }
     }
   },
+<<<<<<< HEAD
   "defaultProject": "quiz-maker"
+=======
+  "defaultProject": "Fetcher"
+>>>>>>> e2db9c586eb194cf5359a37623fd8e84ea89323c
 }
