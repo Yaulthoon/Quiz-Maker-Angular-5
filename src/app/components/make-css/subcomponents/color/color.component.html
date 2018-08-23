@@ -1,0 +1,94 @@
+<div id = "referenceArea" (click) = "this._data.toggleShow()">
+<h3 class = "test" 
+[ngStyle]="this._data.colorSet(this._data.currentBQColor, this._data.currentFQColor, this._data.currentBorderQuestionSize, this._data.currentBorderQuestionColor, this._data.currentBorderQuestionRadius, 'question')">
+How do I refer back to my choices?</h3>
+  <h4 class = "answerArea" (window:resize) = "this.resize($event)"
+  [ngStyle]="this._data.colorSet(this._data.currentBAColor, this._data.currentFAColor, this._data.currentBorderAnswerSize, this._data.currentBorderAnswerColor, this._data.currentBorderAnswerRadius, 'answer')">
+  <h2 [ngStyle] = "{'color': this._data.currentFAColor}">Question Area</h2>
+<div class = "sampleAnswers">
+Background: {{this._data.currentBQColor}}
+</div>
+<div class = "sampleAnswers">
+Font: {{this._data.currentFQColor}}
+</div>
+<div class = "sampleAnswers">
+Border Color: {{this._data.currentBorderQuestionColor}}
+</div>
+<div class = "sampleAnswers">
+Border Width: {{this._data.currentBorderQuestionSize}}
+</div>
+<div class = "sampleAnswers">
+Border Radius: {{this._data.currentBorderQuestionRadius}}
+</div>
+  <h2 [ngStyle] = "{'color': this._data.currentFAColor}">Answer Area</h2>
+<div class = "sampleAnswers">
+Background: {{this._data.currentBAColor}}
+</div>
+<div class = "sampleAnswers">
+Font: {{this._data.currentFAColor}}
+</div>
+<div class = "sampleAnswers">
+Border Color: {{this._data.currentBorderAnswerColor}}
+</div>
+<div class = "sampleAnswers">
+Border Width: {{this._data.currentBorderAnswerSize}}
+</div>
+<div class = "sampleAnswers">
+Border Radius: {{this._data.currentBorderAnswerRadius}}
+</div></h4>
+</div>
+
+<div id = 'sliders'>
+
+<div class = 'stylerBreak'>
+<div class = 'styler'>
+Font Color:
+<input type = "color" [(ngModel)] = 'this._data.currentFAColor'>
+</div>
+<div class = 'styler'>
+<label class = 'hex' name = 'hexToRGB'>OR Insert Hex/RGB:</label> 
+<input class = 'hex' type = 'text' [(ngModel)] = 'this._data.currentFAHex'>
+<div class = 'hexButton' (click) = "this._data.manualColorSet('currentFAColor', this._data.currentFAHex)">Set Color
+</div>
+</div>
+</div>
+
+<div class = 'stylerBreak'>
+<div class = 'styler'>
+Background Color:
+<input type = "color" [(ngModel)] = 'this._data.currentBAColor'>
+</div>
+<div class = 'styler'>
+<label class = 'hex' name = 'hexToRGB'>OR Insert Hex/RGB:</label> 
+<input class = 'hex' type = 'text' [(ngModel)] = 'this._data.currentBAHex'>
+<div class = 'hexButton' (click) = "this._data.manualColorSet('currentBAColor', this._data.currentBAHex)">Set Color
+</div>
+</div>
+</div>
+
+<div class = 'stylerBreak'>
+<div class = 'styler'>
+Border Color:
+<input type = "color" [(ngModel)] = 'this._data.currentBorderAnswerColor'>
+</div>
+
+<div class = 'styler'>
+<label class = 'hex' name = 'hexToRGB'>OR Insert Hex/RGB:</label> 
+<input class = 'hex' type = 'text' [(ngModel)] = 'this._data.currentBorderAnswerHex'>
+<div class = 'hexButton'  (click) = "this._data.manualColorSet('currentBorderAnswerColor', this._data.currentBorderAnswerHex)">Set Color
+</div>
+
+</div>
+<div class = 'styler'>
+Border Width:
+<input class = 'hex' type = 'text' [(ngModel)] = 'this._data.currentBorderAnswerSize'>
+</div>
+
+<div class = 'styler'>
+Border Radius:
+<input class = 'hex' type = 'text' [(ngModel)] = 'this._data.currentBorderAnswerRadius'>
+</div>
+
+</div>
+</div>
+

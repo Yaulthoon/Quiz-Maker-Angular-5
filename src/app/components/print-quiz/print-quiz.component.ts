@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ColorChangerService } from '../color-changer.service';
-import { QuestionCompilerService } from '../question-compiler.service';
+import { ColorChangerService } from '../../services/color-changer.service';
+import { QuestionCompilerService } from '../../services/question-compiler.service';
 
 
 

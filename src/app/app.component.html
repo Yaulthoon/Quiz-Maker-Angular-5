@@ -1,15 +1,20 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <head>
 <base href="/">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/nimbus-sans-l" type="text/css"/> 
+ <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/libertinus-math" type="text/css"/> 
 </head>
-<div id = "logo">Quiz Maker</div>
-<div id = "navigation">
-<a routerLink="about">About</a>
-<a routerLink="makeCSS">Question Area</a>
-<a routerLink="makeCSS2">Answer Area</a>
-<a routerLink="questionairre">Create Questions</a>
-<a routerLink="reviewQuestions">Review Questions</a>
-<a routerLink= "printQuiz">Print Quiz</a>
+<div id = "logo">
+<div class = "title">Quiz Maker</div>
+<div id = "navigation" (window:resize) = "this.resize()">
+<a class = "icon" (click) = "this.toggler()"><i class="fa fa-bars"></i></a>
+<a class = "link" (click) = "this.toggler()" routerLink="about" routerLinkActive = "navActive" [ngStyle] = "this.toggleMenu()">About</a>
+<a class = "link" (click) = "this.toggler()" routerLink="makeCSS" routerLinkActive = "navActive" [ngStyle] = "this.toggleMenu()">Styling</a>
+<a class = "link" (click) = "this.toggler()" routerLink="questionairre" routerLinkActive = "navActive" [ngStyle] = "this.toggleMenu()">Create Questions</a>
+<a class = "link" (click) = "this.toggler()" routerLink="reviewQuestions" routerLinkActive = "navActive" [ngStyle] = "this.toggleMenu()">Review Questions</a>
+<a class = "link" (click) = "this.toggler()" routerLink= "printQuiz" routerLinkActive = "navActive" [ngStyle] = "this.toggleMenu()">Print Quiz</a>
+</div>
 </div>
 <div id="quizMakerBackground">
 <div id="quizMakerForeground">

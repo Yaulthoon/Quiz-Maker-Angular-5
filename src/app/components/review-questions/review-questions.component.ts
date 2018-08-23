@@ -1,9 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { trigger,style,transition,animate,keyframes,query,stagger } from '@angular/animations';
-import { QuestionCompilerService } from '../question-compiler.service';
-import { ColorChangerService } from '../color-changer.service';
-import { QuizScorerService } from '../quiz-scorer.service';
+import { QuestionCompilerService } from '../../services/question-compiler.service';
+import { ColorChangerService } from '../../services/color-changer.service';
+import { QuizScorerService } from '../../services/quiz-scorer.service';
 import { BehaviorSubject } from 'rxjs';
 
 

@@ -1,6 +1,6 @@
  <div class = 'buttonContainer'>
-<div class = 'buttonRight'  (click) = "sendPlaces('questionairre')">Back</div>
-<button [disabled] = "this._quiz.answersKey.value.length === 0" class = 'buttonMiddle'  (click) = "_scorer.score()">Score</button>
+<div class = 'buttonLeft'  (click) = "sendPlaces('questionairre')">Back</div>
+<button [disabled] = "this._quiz.answersKey.value.length === 0" class = 'buttonLeft'  (click) = "_scorer.score()">Score</button>
 <div class = 'buttonLeft'  (click) = "sendPlaces('printQuiz')">Finish</div>
 </div>
 
@@ -11,13 +11,13 @@ If you did not score a 100, please review your questions for mistakes prior to s
   
   <div id = "parent" [@loadedQuestion] = "this._quiz.questionsKey.value.length">
   <div class = 'loadedQuestion' *ngFor = "let questions of this._quiz.questionsKey.value; let i = index">
-<h3 class = 'test' [ngStyle]="_data.setStyle('question')">{{questions}}
+<h3 class = 'test' [ngStyle]= "this._data.colorSet(this._data.currentBQColor, this._data.currentFQColor, this._data.currentBorderQuestionSize, this._data.currentBorderQuestionColor, this._data.currentBorderQuestionRadius, 'question')">{{questions}}
 <div class = 'buttonRightRelative' (click) = "this._quiz.removeQuestions(i)">Delete</div></h3>
-  <h4 class = 'answerArea' [ngStyle]="_data.setStyle('answer')">
+  <h4 class = 'answerArea' [ngStyle]="this._data.colorSet(this._data.currentBAColor, this._data.currentFAColor, this._data.currentBorderAnswerSize, this._data.currentBorderAnswerColor, this._data.currentBorderAnswerRadius, 'question')">
 <div class = 'sampleAnswers' *ngFor = "let answers of this._quiz.storeAnswersKey.value[i]; let j = index">
 <input type = "radio" class = 'radio' name = "answer{{i}}" value = j> <div class = 'answer'>{{answers}}</div>
 </div>
-<div class = "correct" [ngStyle] = "_data.setStyle('answer')">Answer should be: {{this._quiz.answersKey.value[i]}}.</div>
+<div class = "correct" [ngStyle]="this._data.colorSet(this._data.currentBAColor, this._data.currentFAColor, this._data.currentBorderAnswerSize, this._data.currentBorderAnswerColor, this._data.currentBorderAnswerRadius, 'question')">Answer should be: {{this._quiz.answersKey.value[i]}}.</div>
   </h4>
   </div>
   </div>
@@ -25,7 +25,7 @@ If you did not score a 100, please review your questions for mistakes prior to s
 <div class = "buttonContainer">
 <div *ngIf = "this._quiz.answersKey.value.length > 2" class = 'buttonMiddle'  (click) = "_scorer.score()" style = "clear: both">
 Score</div></div>
-<div *ngIf = "this._scorer.scored" class = 'score'>
+<div *ngIf = "this._scorer.scored && this._quiz.answersKey.value.length > 2" class = 'score'>
 Your current score: {{_scorer.scoring}}.  You currently have {{_scorer.incorrect}} incorrect.  
 If you did not score a 100, please review your questions for mistakes prior to submission.
 </div>

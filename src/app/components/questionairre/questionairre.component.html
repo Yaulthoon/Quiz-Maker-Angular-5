@@ -6,12 +6,12 @@ Make sure to select the correct answer before continuing to the next question.
 </h5>
   
 <form (ngSubmit) = "this._quiz.showData()" #questionMaker = "ngForm">
-<div class = "question" [ngStyle] = "_color.setStyle('question')">
+<div class = "question">
 <h2>Question</h2>
 <input type = "text" [(ngModel)] = "this._quiz.question" name = "question" required>
 </div>
   
-<div class = "answerArea" [ngStyle] = "_color.setStyle('answer')">
+<div class = "answerArea">
 <h2 class = "test">Answers</h2>
 <input type = "radio" [(ngModel)] = "this._quiz.selected" name = "selected" value = {{this._quiz.answer.choice1}}>
 <input type = "text"  [(ngModel)] = "this._quiz.answer.choice1" name = "choice1" required>
@@ -24,8 +24,8 @@ Make sure to select the correct answer before continuing to the next question.
 </div>
   
   <div class = 'buttonContainer'>
-<div class = 'buttonRight' (click)="sendPlaces('makeCSS2')">Back</div>
-<button type = "submit" [disabled] = "!questionMaker.form.valid" class = 'buttonMiddle'>Add</button>
+<div class = 'buttonLeft' (click)="sendPlaces('makeCSS2')">Back</div>
+<button type = "submit" [disabled] = "!questionMaker.form.valid" class = 'buttonLeft'>Add</button>
 <div class = 'buttonLeft' (click)="sendPlaces('reviewQuestions')">Review</div>
   </div>
 </form>

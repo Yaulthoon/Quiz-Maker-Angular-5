@@ -1,0 +1,146 @@
+#sliders .sliderContainer {
+	box-sizing: border-box;
+	position: relative;
+	padding: 0px;
+	width: 30%;
+    margin-left: 2.5%;
+	display: inline-block;
+	border: 2px solid black;
+}
+
+#manualContainer {
+	box-sizing: border-box;
+	position: relative;
+	width: 100%;
+	left: 0%;
+	font-size: 1.2vw;
+	font-family: Arial;
+}
+
+#manualContainer h3, #sliders h3 {
+	box-sizing: border-box;
+	position: relative;
+	font-size: 13pt;
+	font-family: Arial;
+	color: #00205e;
+	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: 90%;
+	left: 5%;
+	clear: both;
+}
+
+#manualContainer input[type = 'text'] {
+	width: 4.5vw;
+	font-size: 1.2vw;
+	font-family: Arial;
+	font-weight: bold;
+	text-align: center;
+}
+
+#manualContainer .hex {
+	box-sizing: border-box;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-right: .4vw;
+}
+
+#manualContainer .hexButton {
+	box-sizing: border-box;
+	position: relative;
+	display: inline;
+	margin-left: 2.5vw;
+	padding: 2px 10px 2px 10px;
+	text-align: center;
+	border: 2px solid black;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#manualContainer .hexButton:after {
+	clear: both;
+}
+
+#manualContainer .manualButton {
+	box-sizing: border-box;
+	position: relative;
+	display: inline;
+	margin-left: 2.5vw;
+	padding: 2px 10px 2px 10px;
+	text-align: center;
+	border: 2px solid black;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#manualContainer .separator {
+	margin-left: 2.5vw;
+	margin-right: 2.5vw;
+	font-weight: bold;
+	display: inline;
+}
+
+#sliders {
+	box-sizing: border-box;
+	position: relative;
+	width: 100%;
+}
+
+#styleNav {
+	box-sizing: border-box;
+	position: relative;
+	width: 100%;
+	left: 0%;
+	padding: 10px 10px 10px 0px;
+	z-index: 2;
+	
+}
+
+#styleNav a {
+	position: relative;
+	box-sizing: border-box;
+	padding: 10px 10px 10px 10px;
+	margin: 0px;
+	font:14pt "NimbusSanLConRegular", Arial, sans-serif;
+	color: #133d15;
+	text-align: center;
+	border-radius: 3px;
+}
+
+#styleNav a:hover {
+	text-decoration: underline;
+}
+
+.subNav  {
+	border-top: 2px solid #133d15;
+	border-right: 2px solid #133d15;
+	border-left: 2px solid #133d15;
+	border-bottom: 2px solid white;
+	z-index: 2;
+	background: white;
+	font-weight: bold;
+}
+
+#cssContents {
+	margin: 0;
+	margin-bottom: 10px;
+	margin-top: -.8px;
+	box-sizing: border-box;
+	position: relative;
+	width: 100%;
+	left: 0%;
+	font:1.3vw "NimbusSanLConRegular", Arial, sans-serif;
+	padding: 10px;
+	border: 2px solid #133d15;
+	border-radius: 0px 0px 3px 3px;
+	z-index: 0;
+}
+
+@media only screen and (max-width:450px) {
+	
+	#styleNav a {
+		font-size: 12pt;
+	}
+}
+

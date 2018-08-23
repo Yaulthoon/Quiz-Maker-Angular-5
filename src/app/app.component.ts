@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
-import { ColorChangerService } from './color-changer.service';
-import { QuestionCompilerService } from './question-compiler.service';
+import { Component, OnInit } from '@angular/core';
+import { ColorChangerService } from './services/color-changer.service';
+import { QuestionCompilerService } from './services/question-compiler.service';
 import { Router } from '@angular/router';
 import { Routes, RouterModule } from '@angular/router';
 import { trigger,style,transition,animate,keyframes,query,stagger } from '@angular/animations';
 
-
+//navActive preference ceeba0
 
 @Component({
   selector: 'app-root',
@@ -26,8 +26,58 @@ import { trigger,style,transition,animate,keyframes,query,stagger } from '@angul
   ])])]
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'app';
+  toggle = false;
+  screenWidth;
+  
+  ngOnInit() {
+  }
+  
+  getScreenWidth() {
+	  console.log(window.outerWidth);
+  }
+  
+  toggler() {
+	  if (this.toggle === false) {
+		  this.toggle = true;
+	  } else {
+		  this.toggle = false;
+	  }
+  }
+  
+  trial() {
+	  if(window.outerWidth > 750) {
+		  return {
+		  "display": "inline",
+		  "font": "1.3vw Arial",
+          "color": "#fff",
+          "margin-left": "5.5%",
+          "cursor": "pointer",
+          "text-decoration": "underline"
+		  }
+	  }
+  }
+  
+  resize() {
+	  this.screenWidth = window.outerWidth;
+  }
+		  
+  
+  toggleMenu() {
+	    if(this.toggle === true && window.outerWidth <= 760) {
+			console.log(this.screenWidth);
+			return {
+			"display": "block",
+			"width": "100%"
+	}
+	  } else if (this.toggle === false && window.outerWidth <= 760) {
+		  console.log(this.screenWidth);
+			return {
+			  "display": "none"
+		  }
+	  }
+  }
   
   getRouteAnimation(outlet) {
     return outlet.activatedRouteData.animation

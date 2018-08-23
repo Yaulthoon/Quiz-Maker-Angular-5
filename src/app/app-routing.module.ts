@@ -1,17 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MakeCssComponent } from './make-css/make-css.component';
-import { InitialComponent } from './initial/initial.component';
-import { MakeCss2Component } from './make-css2/make-css2.component';
-import { QuestionairreComponent } from './questionairre/questionairre.component';
-import { ReviewQuestionsComponent } from './review-questions/review-questions.component';
-import { AboutComponent } from './about/about.component';
-import { PrintQuizComponent } from './print-quiz/print-quiz.component';
-
-
-
-
-
+import { MakeCssComponent } from './components/make-css/make-css.component';
+import { InitialComponent } from './components/initial/initial.component';
+import { MakeCss2Component } from './components/make-css2/make-css2.component';
+import { QuestionairreComponent } from './components/questionairre/questionairre.component';
+import { ReviewQuestionsComponent } from './components/review-questions/review-questions.component';
+import { AboutComponent } from './components/about/about.component';
+import { PrintQuizComponent } from './components/print-quiz/print-quiz.component';
+import { ColorComponent } from './components/make-css/subcomponents/color/color.component';
+import { BackgroundComponent } from './components/make-css/subcomponents/background/background.component';
+import { BorderComponent } from './components/make-css/subcomponents/border/border.component';
 
 
 const routes: Routes = [
@@ -26,7 +24,23 @@ const routes: Routes = [
 {
 	path: 'makeCSS',
 	component: MakeCssComponent,
-	data: { animation: 'makeCSS' }
+	data: { animation: 'makeCSS' },
+	children: [
+	{
+		path: '',
+		component: BackgroundComponent
+	},
+	
+	{
+		path: 'answerArea',
+		component: ColorComponent
+	},
+	
+	{
+		path: 'both',
+		component: BorderComponent
+	}
+	]
 },
 
 {

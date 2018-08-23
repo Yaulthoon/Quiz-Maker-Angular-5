@@ -1,0 +1,14 @@
+
+<h1 (click) = "this.getScreenWidth()">Adjust the Style</h1>
+<div id = "wrapper">
+<div id = "styleNav">
+<a routerLink = "/makeCSS/" routerLinkActive = "subNav" [routerLinkActiveOptions] = "{exact:true}">Question Area</a>
+<a routerLink = "/makeCSS/answerArea" routerLinkActive = "subNav" [routerLinkActiveOptions] = "{exact:true}">Answer Area</a>
+<a routerLink = "/makeCSS/both" routerLinkActive = "subNav" [routerLinkActiveOptions] = "{exact:true}">Overall</a>
+</div>
+</div>
+<div id = "cssContents">
+<router-outlet></router-outlet>
+<div class = 'buttonRight'  (click) = "sendPlaces('questionairre')"> Continue </div>
+</div>
+

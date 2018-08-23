@@ -1,7 +1,7 @@
  <h1>Finishing Steps</h1>
   
 <div [ngStyle] = "{'margin': '0px 5% 0px 5%'}">
-  <ol>
+  <ol class = 'list'>
   <li>Copy the below code.</li>
   <li>Paste the code into a notepad or similar document.</li>
   <li>If you have access to a web server, you can try opening your saved 
@@ -16,8 +16,12 @@
 box-sizing: border-box; <br/>
 padding: 5px; <br/>
 margin: 25px 10px 0px 10px; <br/>
-color: rgb({{this._data.fontQuestionRed.value}}, {{this._data.fontQuestionGreen.value}}, {{this._data.fontQuestionBlue.value}}); <br/>
-background-color: rgb({{this._data.backgroundQuestionRed.value}}, {{this._data.backgroundQuestionGreen.value}}, {{this._data.backgroundQuestionBlue.value}}); <br/>
+color: {{this._data.currentFQColor}}; <br/>
+background-color: {{this._data.currentBQColor}}; <br/>
+border-width: {{this._data.currentBorderQuestionSize}}; <br/>
+border-style: solid; <br/>
+border-color: {{this._data.currentBorderQuestionColor}}; <br/>
+border-radius: {{this._data.currentBorderQuestionRadius}}; <br/>
 width: 80%; <br/>
 position: relative; <br/>
 left: 10%; <br/>
@@ -27,8 +31,12 @@ left: 10%; <br/>
 box-sizing: border-box; <br/>
 padding: 5px; <br/>
 margin: 0px 10px 0px 10px; <br/>
-color: rgb({{this._data.fontAnswerRed.value}}, {{this._data.fontAnswerGreen.value}}, {{this._data.fontAnswerBlue.value}}); <br/>
-background-color: rgb({{this._data.backgroundAnswerRed.value}}, {{this._data.backgroundAnswerGreen.value}}, {{this._data.backgroundAnswerBlue.value}}); <br/>
+color: {{this._data.currentFAColor}}; <br/>
+background-color: {{this._data.currentBAColor}}; <br/>
+border-width: {{this._data.currentBorderAnswerSize}}; <br/>
+border-style: solid; <br/>
+border-color: {{this._data.currentBorderAnswerColor}}; <br/>
+border-radius: {{this._data.currentBorderAnswerRadius}}; <br/>
 width: 80%; <br/>
 position: relative; <br/>
 left: 10%; <br/>
@@ -38,8 +46,12 @@ left: 10%; <br/>
 box-sizing: border-box; <br/>
 padding: 5px; <br/>
 margin: 15px 10px 0px 5px; <br/>
-color: rgb({{this._data.fontQuestionRed.value}}, {{this._data.fontQuestionGreen.value}},{{this._data.fontQuestionBlue.value}}); <br/>
-background-color: rgb({{this._data.backgroundQuestionRed.value}}, {{this._data.backgroundQuestionGreen.value}},{{this._data.backgroundQuestionBlue.value}}); <br/>
+color: {{this._data.currentFQColor}}; <br/>
+background-color: {{this._data.currentBQColor}}; <br/>
+border-width: {{this._data.currentBorderQuestionSize}}; <br/>
+border-style: solid; <br/>
+border-color: {{this._data.currentBorderQuestionColor}}; <br/>
+border-radius: {{this._data.currentBorderQuestionRadius}}; <br/>
 width: 8%; <br/>
 position: relative; <br/>
 left: 10%; <br/>
@@ -158,3 +170,5 @@ function score () {{'{'}} <br/>
 	<p> &#60;/script&#62; </p> <br/>
 	<p> &#60;/body&#62; </p> <br/>
 	<p> &#60;/html&#62; </p> <br/>
+	
+	</div>

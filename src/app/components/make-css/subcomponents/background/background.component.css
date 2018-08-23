@@ -1,0 +1,203 @@
+
+#referenceArea {
+	position: relative;
+	display: inline-block;
+	left: 0%;
+	width: 55%;
+	box-sizing: border-box;
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+
+#sliders {
+	position: relative;
+	display: inline-block;
+	width: 40%;
+	float: left;
+	box-sizing: border-box;
+	margin: 10px 0 10px 0;
+	padding: 0;
+}
+
+#sliders input[type = 'color'] {
+	box-sizing: border-box;
+	width: 100px;
+	height: 20px;
+	display: inline;
+	cursor: pointer;
+	vertical-align: top;
+	background: transparent;
+	border: 0px solid black;
+}
+
+.styler {
+	padding: 5px 0px 5px 10px;
+	box-sizing: border-box;
+	color: #0e2e10;
+	overflow: wrap;
+}
+
+.stylerBreak {
+	box-sizing: border-box;
+	margin-bottom: 20px;
+	margin-left: 10%;
+	background: #edfaee;
+	border-radius: 3px;
+}
+
+#sliders .sliderContainer {
+	width: 60%;
+	left: 0%;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+.redInput, .greenInput, .blueInput, .hex {
+	margin-right: 10px;
+	font: normal 12pt "LibertinusMathRegular", "Times New Roman";
+}
+
+.redInput {
+	border: 1px solid #e60000;
+	color: #e60000;
+}
+
+.greenInput {
+	border: 1px solid #009900;
+	color: #009900;
+}
+
+.blueInput {
+	border: 1px solid #0000b3;
+	color: #0000b3;
+}
+
+input[type=text] {
+	width: 70px;
+	padding: 3px;
+	box-sizing: border-box;
+	font: normal 12pt "LibertinusMathRegular", "Times New Roman";
+	border: 1px solid #133d15;
+}
+
+.hexButton, .manualButton {
+    box-sizing: border-box;
+	position: relative;
+	display: inline;
+	margin-left: 15px;
+	padding: 0px 25px 2px 25px;
+	text-align: center;
+	border: 2px solid black;
+	cursor: pointer;
+	font: normal 12pt "NimbusSanLConRegular", Arial, sans-serif;
+	overflow: wrap;
+}
+
+.separator {
+	margin: 5px 0px 5px 0px;
+	font: normal 12pt "LibertinusMathRegular", "Times New Roman";
+}
+
+.stylerContainer {
+	margin: 0;
+	padding: 0;
+}
+
+#referenceArea h3 { 
+   position:relative;
+   box-sizing:border-box;
+   padding:5px 5px 5px 20px;
+   margin:10px 0 0px 0;
+   width:90%;
+   left:5%;
+   font:16pt "NimbusSanLConRegular", Arial, sans-serif;
+   color:#133d15;
+}
+
+.answerArea h2 {
+	box-sizing: border-box;
+	margin-top: 7px;
+	padding-left: 15px;
+	left: 0%;
+	text-align: left;
+	font: normal 14pt "NimbusSanLConRegular", Arial, sans-serif;
+}
+
+@media only screen and (max-width:750px) {
+#referenceArea {
+	box-sizing: border-box;
+	position: relative;
+	top: 0%;
+	width: 100%;
+	left: 0%;
+}
+
+#referenceArea h3 {
+	left: 0%;
+	width: 100%;
+	cursor: pointer;
+}
+
+h4 {
+	display: none;
+	cursor: pointer;
+}
+
+#sliders {
+	box-sizing: border-box;
+	position: relative;
+	float: none;
+	left: 0%;
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 0;
+}
+
+.styler {
+	font-size: 12pt;
+	width: 90%;
+	left: 5%;
+	margin: 0;
+}
+
+.stylerBreak {
+	margin-left: 0;
+}
+
+.hexButton {
+	padding-bottom: 0;
+	text-align: center;
+	margin-right: 3px;
+	margin-left: 7px;
+}
+
+input[type=text] {
+	width: 60px;
+	padding: 3px;
+	box-sizing: border-box;
+	font: normal 12pt "LibertinusMathRegular", "Times New Roman";
+}
+
+}
+
+@media only screen and (max-width:400px) {
+	.hexButton {
+		margin-left: 5px;
+		margin-right: 0;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	
+	input[type=text] {
+	width: 60px;
+	padding: 3px;
+	margin-left: 3px;
+	box-sizing: border-box;
+	font: normal 12pt "LibertinusMathRegular", "Times New Roman";
+}
+}
+	

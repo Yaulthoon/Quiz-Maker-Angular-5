@@ -1,4 +1,3 @@
-
 <h1>Adjust the Style</h1>
 <div>
 <div class = "toggleBox"> 
@@ -36,7 +35,7 @@ Background for question area:
   
   <!--Question Area Background-->
 <div [hidden] = "!this.isActive">
-  <h2>Question Area Background</h2>
+  <h2>Background</h2>
 <div id = 'sliders'>
 <h3>Sliders</h3>
 <div class = 'sliderContainer'>
@@ -71,7 +70,7 @@ class = 'blueSlider' value = {{this._data.backgroundQuestionBlue.value}}
 (click) = "this._data.adjustColorRGB(this._data.backgroundQuestionRed, this._data.backgroundQuestionGreen, this._data.backgroundQuestionBlue, 'question')">Set Color</div>
 <div class = 'separator'> OR </div>
 <label class = 'hex' name = 'hexToRGB'>Insert Hex:</label> 
-<input [ngStyle] = "this.hexInput()" type = 'text' [(ngModel)] = 'this._data.currentHex'>
+<input class = 'hex' [ngStyle] = "this.hexInput()" type = 'text' [(ngModel)] = 'this._data.currentHex'>
 <div class = 'hexButton' [ngStyle] = "this._data.setStyle('question')" (click) = "this._data.rgbConvert(this._data.currentHex, this._data.backgroundQuestionRed, this._data.backgroundQuestionGreen, this._data.backgroundQuestionBlue)">Set Color
 </div>
 </div>
